@@ -3,108 +3,284 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purna Sati Chandrala's Portfolio</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
+        /* Reset & Global Styles */
+        body,
+        h1,
+        h2,
+        p,
+        a {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
+            margin: 2rem;
             color: #333;
+            line-height: 1.6;
+            font-size: 16px;
         }
 
-        .navbar {
-            margin-bottom: 20px;
+        h1, h2 {
+            color: #444;
+        }
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
         }
 
-        .card {
-            margin-bottom: 20px;
+        /* Navigation */
+        nav {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 1rem;
         }
 
-        .card-body img {
-            max-width: 100%;
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Main Content */
+        main {
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 0.3rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        /* Project */
+        /* Project Cards */
+        .project-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .project-card ul {
+            list-style-type: disc;
+            margin-left: 24px;
+        }
+
+        /* Project Image */
+        .project-image {
+            width: 100%;
+            max-width: 400px;
             height: auto;
+            margin-bottom: 12px;
+            border-radius: 4px;
         }
 
-        .contact-info {
-            font-size: 1.2em;
+        /* Work Experience Cards */
+        .work-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .contact-info a {
-            color: #007BFF;
+        /* Contact Links */
+        .contact-link {
+            display: block;
+            margin-top: 0.5rem;
+        }
+        /* Scroll to Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #scrollToTop:hover {
+            background-color: #0056b3;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 14px;
+            color: #888;
         }
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Purna Sati Chandrala's Portfolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
+    <!-- Header -->
+    <header>
+        <h1>Purna Sati Chandrala's Portfolio</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#work-experience">Work Experience</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <div class="container">
+    <!-- Main Content -->
+    <main>
+
         <!-- About Section -->
-        <div id="about" class="my-4">
+        <section id="about">
             <h2>About Me</h2>
-            <p>
-                I hold a Masters in Geoinformation from the University of Bonn and have extensive experience as a Data
-                Science Researcher.
-                <!-- ...additional bio... -->
-            </p>
-        </div>
+            <p>I'm Purna Sati Chandrala, a student and a professional in the field of Geoinformation and Spatial Development based
+                in Bonn, Germany. Currently, I am pursuing my Master's at the University of Bonn and working part-time as a Graduate
+                Research Assistant at GESIS - Leibniz-Institut für Sozialwissenschaften in Cologne.
+            
+                I have a background in machine learning, GIS (Geographic Information Systems), and data management. Over the years,
+                I've learned and used tools like Python, R, SQL, and various GIS software to work on different projects. Some of my
+                work includes analyzing satellite data, working on land use maps from the 1940s, and even developing an Android app
+                for travel time maps in Bonn.
+            
+                Before this, I worked at Amazon Development Centre in Hyderabad, and also had a short but insightful experience as a
+                data scientist intern at Root2Ai Technology Private Limited. I love diving into data, finding patterns, and using
+                this knowledge to solve real-world problems.
+            
+                In my free time, I volunteer as a team leader designing machine learning courses and also offer tutoring and career
+                counseling services.
+            
+                Feel free to explore my website to learn more about my projects, publications, and other professional experiences.
+                You can also find me on LinkedIn and Github.</p>
+        </section>
 
-        <!-- Education Section -->
-        <div id="education" class="my-4">
-            <h2>Education</h2>
-            <p>University of Bonn, MSc Geoinformation, Sep 2019-Present, Bonn, Germany</p>
-            <!-- ...additional education... -->
-        </div>
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2>My Portfolio</h2>
+            <div class="project-card">
+                <h3>Using Machine Learning and Artificial Neural Networks for Analysis of Cologne Residential Land Market</h3>
+                <img src="path/to/your/image.jpg" alt="Project Image" class="project-image">
+                <p>Master Project, MSc GIS and Spatial Development</p>
+                <p>April 2020 - April 2021</p>
+                <ul>
+                    <li>Made predictive data analysis using regression analysis and artificial neural networks</li>
+                    <li>Improved the accuracy of model prediction from 48% to 63%</li>
+                </ul>
+            </div>
 
-        <!-- Experience Section -->
-        <div id="experience" class="my-4">
-            <h2>Experience</h2>
-            <p>GESIS - Leibniz-Institut für Sozialwissenschaften, Data Science Researcher, May 2021 – June 2023,
-                Cologne, Germany</p>
-            <!-- ...additional experience... -->
-        </div>
+            <div class="project-card">
+                <h3>Visualization of Travel Time Maps of Bonn</h3>
+                <p>Location-Based Services, MSc GIS and Spatial Development</p>
+                <p>April 2020 - Aug 2020</p>
+                <ul>
+                    <li>Developed an Android Application for travel time maps in Bonn</li>
+                    <li>Analysis of the streets of Bonn using ArcGIS</li>
+                </ul>
+            </div>
 
-        <!-- Projects Section -->
-        <div id="projects" class="my-4">
-            <h2>Projects</h2>
-            <p>Decision trees for digitizing Historic Maps of Thüringen (Ongoing) | Python, R, Decision Trees (Master
-                Thesis)</p>
-            <!-- ...additional projects... -->
-        </div>
+            <div class="project-card">
+                <h3>Developing a Geoinformation System for the Interdisciplinary Research Data Management</h3>
+                <p>Data Management for Interdisciplinary Research, MSc GIS and Spatial Development</p>
+                <p>September 2020 - February 2021</p>
+                <ul>
+                    <li>Provided solution for Research Data Management of the Agriculture field data using GIS, RDF Database,
+                        SQL</li>
+                    <li>Worked on developing an Ontology for the metadata and wrote SPARQL queries</li>
+                    <li>Developed a webpage for Spatial Data</li>
+                </ul>
+            </div>
+        <!-- Work Experience Section -->
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+
+            <div class="work-card">
+                <h3>Data Scientist Intern at Root2Ai</h3>
+                <p>Jan 2020 - Mar 2020</p>
+                <ul>
+                    <li>Implemented machine learning algorithms for predictive analytics.</li>
+                    <li>Conducted data visualization using Python libraries.</li>
+                </ul>
+            </div>
+
+            <div class="work-card">
+                <h3>Graduate Research Assistant at GESIS</h3>
+                <p>June 2021 - Present</p>
+                <ul>
+                    <li>Conducted geospatial analysis using GIS software.</li>
+                    <li>Contributed to academic papers in the field of spatial informatics.</li>
+                </ul>
+            </div>
+            <div class="work-card">
+                <h3>Graduate Research Assistant at GESIS</h3>
+                <p>June 2021 - Present</p>
+                <ul>
+                    <li>Conducted geospatial analysis using GIS software.</li>
+                    <li>Contributed to academic papers in the field of spatial informatics.</li>
+                </ul>
+            </div>
+            <div class="work-card">
+                <h3>Graduate Research Assistant at GESIS</h3>
+                <p>June 2021 - Present</p>
+                <ul>
+                    <li>Conducted geospatial analysis using GIS software.</li>
+                    <li>Contributed to academic papers in the field of spatial informatics.</li>
+                </ul>
+            </div>
+        </section>
 
         <!-- Contact Section -->
-        <div id="contact" class="my-4">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p>Email: <a href="mailto:satichandrala@gmail.com">satichandrala@gmail.com</a></p>
-                <p>Mobile: <a href="tel:+491636369096">+49 163 6369096</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/purnasatichandrala"
-                        target="_blank">linkedin.com/in/purnasatichandrala</a></p>
-            </div>
-        </div>
-    </div>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <a href="mailto:satichandrala@gmail.com" class="contact-link">Email: satichandrala@gmail.com</a>
+            <a href="https://www.linkedin.com/in/purnasatichandrala" target="_blank" rel="noopener noreferrer"
+                class="contact-link">LinkedIn</a>
+            <a href="https://www.github.com/satichandrala" target="_blank" rel="noopener noreferrer"
+                class="contact-link">Github</a>
+        </section>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </main>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop">Scroll to Top</button>
+    
+    <!-- Interactivity Scripts -->
+    <script>
+    // Scroll to top functionality
+    let scrollToTopBtn = document.getElementById('scrollToTop');
 
+    scrollToTopBtn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 100) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Purna Sati Chandrala. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
