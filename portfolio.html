@@ -25,9 +25,11 @@
             font-size: 16px;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             color: #444;
         }
+
         /* Header */
         header {
             text-align: center;
@@ -59,7 +61,7 @@
             border-radius: 0.3rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        /* Project */
+
         /* Project Cards */
         .project-card {
             border: 1px solid #ccc;
@@ -78,15 +80,6 @@
             margin-left: 24px;
         }
 
-        /* Project Image */
-        .project-image {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            margin-bottom: 12px;
-            border-radius: 4px;
-        }
-
         /* Work Experience Cards */
         .work-card {
             border: 1px solid #ccc;
@@ -101,6 +94,7 @@
             display: block;
             margin-top: 0.5rem;
         }
+
         /* Scroll to Top Button */
         #scrollToTop {
             position: fixed;
@@ -119,6 +113,7 @@
         #scrollToTop:hover {
             background-color: #0056b3;
         }
+
         /* Footer */
         footer {
             text-align: center;
@@ -150,32 +145,36 @@
         <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
-            <p>I'm Purna Sati Chandrala, a student and a professional in the field of Geoinformation and Spatial Development based
-                in Bonn, Germany. Currently, I am pursuing my Master's at the University of Bonn and working part-time as a Graduate
-                Research Assistant at GESIS - Leibniz-Institut für Sozialwissenschaften in Cologne.
-            
-                I have a background in machine learning, GIS (Geographic Information Systems), and data management. Over the years,
-                I've learned and used tools like Python, R, SQL, and various GIS software to work on different projects. Some of my
-                work includes analyzing satellite data, working on land use maps from the 1940s, and even developing an Android app
-                for travel time maps in Bonn.
-            
-                Before this, I worked at Amazon Development Centre in Hyderabad, and also had a short but insightful experience as a
-                data scientist intern at Root2Ai Technology Private Limited. I love diving into data, finding patterns, and using
-                this knowledge to solve real-world problems.
-            
-                In my free time, I volunteer as a team leader designing machine learning courses and also offer tutoring and career
-                counseling services.
-            
-                Feel free to explore my website to learn more about my projects, publications, and other professional experiences.
-                You can also find me on LinkedIn and Github.</p>
+            <p>I'm Purna Sati Chandrala, a passionate data scientist and geospatial expert based in Bonn, Germany. I
+                hold a
+                Master's degree in Geoinformation and Spatial Development from the University of Bonn.</p>
+
+            <p>With a background in Civil Engineering and extensive experience in machine learning, GIS, and data
+                management, I
+                bring a unique blend of skills to the table. My journey in the field started with a Bachelor's in Civil
+                Engineering from JNTU Kakinada, India.</p>
+
+            <p>Throughout my academic and professional career, I have excelled in various roles, including a Data
+                Scientist at the
+                University of Jena, a Spatial Data Analyst at GESIS - Leibniz-Institut für Sozialwissenschaften, and a
+                Graduate
+                Research Assistant at Ruhr-Universität Bochum. My work involves utilizing technologies such
+                as
+                OpenCV, Python, GIS libraries (ArcGIS, QGIS, GDAL), and machine learning frameworks (TensorFlow, Keras,
+                PyTorch).</p>
+
+            <p>Feel free to explore my portfolio to learn more about my projects and contributions. Connect with me on
+                LinkedIn and
+                GitHub for the latest updates.</p>
         </section>
 
         <!-- Portfolio Section -->
         <section id="portfolio">
             <h2>My Portfolio</h2>
+            <!-- Project Cards with details from CV -->
             <div class="project-card">
-                <h3>Using Machine Learning and Artificial Neural Networks for Analysis of Cologne Residential Land Market</h3>
-                <img src="path/to/your/image.jpg" alt="Project Image" class="project-image">
+                <h3>Using Machine Learning and Artificial Neural Networks for Analysis of Cologne Residential Land
+                    Market</h3>
                 <p>Master Project, MSc GIS and Spatial Development</p>
                 <p>April 2020 - April 2021</p>
                 <ul>
@@ -199,82 +198,142 @@
                 <p>Data Management for Interdisciplinary Research, MSc GIS and Spatial Development</p>
                 <p>September 2020 - February 2021</p>
                 <ul>
-                    <li>Provided solution for Research Data Management of the Agriculture field data using GIS, RDF Database,
+                    <li>Provided solution for Research Data Management of the Agriculture field data using GIS, RDF
+                        Database,
                         SQL</li>
                     <li>Worked on developing an Ontology for the metadata and wrote SPARQL queries</li>
                     <li>Developed a webpage for Spatial Data</li>
                 </ul>
             </div>
+        </section>
+
         <!-- Work Experience Section -->
         <section id="work-experience">
             <h2>Work Experience</h2>
-
+            <!-- Work Cards with details from CV -->
             <div class="work-card">
-                <h3>Data Scientist Intern at Root2Ai</h3>
-                <p>Jan 2020 - Mar 2020</p>
+                <h3>Data Scientist - University of Jena</h3>
+                <p>Jan 2023 - June 2023</p>
                 <ul>
-                    <li>Implemented machine learning algorithms for predictive analytics.</li>
-                    <li>Conducted data visualization using Python libraries.</li>
+                    <li>Utilized OpenCV and Python for map restoration, enabling image segmentation tasks</li>
+                    <li>Conducted a study on image stitching algorithms, enhancing map repair processes</li>
                 </ul>
             </div>
 
             <div class="work-card">
-                <h3>Graduate Research Assistant at GESIS</h3>
-                <p>June 2021 - Present</p>
+                <h3>Spatial Data Analyst - GESIS - Leibniz-Institut für Sozialwissenschaften</h3>
+                <p>May 2021 - Current Job</p>
                 <ul>
-                    <li>Conducted geospatial analysis using GIS software.</li>
-                    <li>Contributed to academic papers in the field of spatial informatics.</li>
+                    <li>Digitized and classified scanned land use (LULC) maps of 1940s from World War II at 60% accuracy
+                        with Classification and Regression Trees (CART) using R</li>
+                    <li>Georeferenced old maps using QGIS, prepared training manuals</li>
+                    <li>Contributed to internal research on Statistical Disclosure Control, Output Policies, and better
+                        ways
+                        to protect metadata usage at the GESIS Secure Data Centre</li>
+                    <li>Communicated with researchers from over 10 different countries about data usage and data use
+                        agreements, demonstrating strong intercultural communication skills</li>
                 </ul>
             </div>
+
             <div class="work-card">
-                <h3>Graduate Research Assistant at GESIS</h3>
-                <p>June 2021 - Present</p>
+                <h3>Graduate Research Assistant - Ruhr-Universität Bochum</h3>
+                <p>Jan 2022 - Nov 2022</p>
                 <ul>
-                    <li>Conducted geospatial analysis using GIS software.</li>
-                    <li>Contributed to academic papers in the field of spatial informatics.</li>
+                    <li>Developed data pipelines to download Sentinel-1 and 2 satellite data into the data lake using
+                        Python</li>
+                    <li>Made UI Designs for the company’s website, exploratory data analysis, and visualizations using
+                        Python to create heat maps</li>
                 </ul>
             </div>
+
             <div class="work-card">
-                <h3>Graduate Research Assistant at GESIS</h3>
-                <p>June 2021 - Present</p>
+                <h3>Machine Learning Data Associate - Amazon Dev. Centre Pvt Ltd India</h3>
+                <p>July 2017 - Sep 2019</p>
                 <ul>
-                    <li>Conducted geospatial analysis using GIS software.</li>
-                    <li>Contributed to academic papers in the field of spatial informatics.</li>
+                    <li>Helped ML Engineers with natural language analysis to extract better data</li>
+                    <li>Maintained a consistent accuracy of 98% to 99% to annotate text data and verify the accuracy of
+                        ASR, NLP recognition, and response of the conversational AI</li>
+                </ul>
+            </div>
+
+            <div class="work-card">
+                <h3>Business Engineer - Asha FlyAsh Bricks</h3>
+                <p>June 2016 - June 2017</p>
+                <ul>
+                    <li>Worked in the Engineering department and client management</li>
+                    <li>Improved manufacturing and production of bricks and increased sales by 70%</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Honors and Awards Section -->
+        <section id="honors-awards">
+            <h2>Honors and Awards</h2>
+            <ul>
+                <li>Received Best Project Award for Bachelor Thesis in 2016 during graduation</li>
+                <li>Alumni Merit Scholarship recipient for three consecutive academic years, 2012-2015</li>
+            </ul>
+        </section>
+        
+        <!-- Volunteering Section -->
+        <section id="volunteering">
+            <h2>Volunteering</h2>
+            <p>Ignitus (March 2021 - Feb 2022)</p>
+            <ul>
+                <li>Team Leader - ML Courses Design</li>
+                <li>Managed a team of four and conducted code reviews on GitHub</li>
+            </ul>
+        
+            <p>Freelancing (March 2021 - Feb 2022)</p>
+            <ul>
+                <li>Tutoring and Career Counselling</li>
+                <li>Tutored primary school students and counseled high school students in choosing their career path</li>
+            </ul>
+        </section>
+        
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <p>Urbanistica INFORMAZIONI, November 2021</p>
+            <ul>
+                <li>Chandrala, P.S. and Teichert, E. (2021) ‘Issues on urban planning and governance in India. Temporary
+                    utilization of public spaces for religious events’, urbanistica INFORMAZIONI, pp. 98–100.</li>
+                <li>Chandrala, P.S. and Surisetty, S.C. (2021) ‘Issues on urban planning and governance in India. Digitization
+                    and
+                    e-Governance’, urbanistica INFORMAZIONI, November, pp. 101–103.</li>
+            </ul>
+        </section>
+
+                <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Me</h2>
-            <a href="mailto:satichandrala@gmail.com" class="contact-link">Email: satichandrala@gmail.com</a>
+            <a href="mailto:purnasatichandrala@gmail.com" class="contact-link">Email: purnasatichandrala@aol.com</a>
             <a href="https://www.linkedin.com/in/purnasatichandrala" target="_blank" rel="noopener noreferrer"
                 class="contact-link">LinkedIn</a>
             <a href="https://www.github.com/satichandrala" target="_blank" rel="noopener noreferrer"
-                class="contact-link">Github</a>
+                class="contact-link">GitHub</a>
         </section>
-
     </main>
+
     <!-- Scroll to Top Button -->
     <button id="scrollToTop">Scroll to Top</button>
-    
+
     <!-- Interactivity Scripts -->
     <script>
-    // Scroll to top functionality
-    let scrollToTopBtn = document.getElementById('scrollToTop');
+        // Scroll to top functionality
+        let scrollToTopBtn = document.getElementById('scrollToTop');
 
-    scrollToTopBtn.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+        scrollToTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 100) {
-            scrollToTopBtn.style.display = 'block';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
-    });
-
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
     </script>
 
     <!-- Footer -->
