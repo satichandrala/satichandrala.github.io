@@ -75,29 +75,37 @@
             border-radius: 0.6rem;
             background-color: #e4cfa3;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
         }
 
-        /* Project & Work Cards */
-        .project-card,
-        .work-card {
+        section:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Sticky Note Style Cards */
+        .sticky-note {
             background-color: #fff;
-            border: 1px solid #d7c3a3;
+            border: 2px dashed #d7c3a3;
             border-radius: 16px;
             padding: 20px;
             margin-bottom: 16px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
+            transition: transform 0.3s;
         }
 
-        .project-card h3,
-        .work-card h3 {
+        .sticky-note:hover {
+            transform: rotate(-2deg) translateY(-10px);
+        }
+
+        .sticky-note h3 {
             color: #5b4636;
+            margin-bottom: 8px;
         }
 
-        .project-card ul,
-        .work-card ul {
-            list-style-type: circle;
-            margin-left: 24px;
+        .sticky-note p {
+            margin-bottom: 8px;
         }
 
         /* Contact Links */
@@ -175,54 +183,46 @@
     <main>
 
         <!-- About Section -->
-        <section id="about" class="animated-section">
+        <section id="about" class="animated-section" onclick="document.getElementById('about-content').scrollIntoView({ behavior: 'smooth' });">
             <h2>About Me</h2>
-            <p>I'm Purna Sati Chandrala, a passionate data scientist and geospatial expert based in Bonn, Germany. I hold a
-                Master's degree in Geoinformation and Spatial Development from the University of Bonn.</p>
-
-            <p>With a background in Civil Engineering and extensive experience in machine learning, GIS, and data management, I
-                bring a unique blend of skills to the table. My journey in the field started with a Bachelor's in Civil
-                Engineering from JNTU Kakinada, India.</p>
         </section>
+        <div id="about-content" class="sticky-note">
+            <h3>About Me</h3>
+            <p>I'm Purna Sati Chandrala, a passionate data scientist and geospatial expert based in Bonn, Germany. I hold a Master's degree in Geoinformation and Spatial Development from the University of Bonn.</p>
+            <p>With a background in Civil Engineering and extensive experience in machine learning, GIS, and data management, I bring a unique blend of skills to the table. My journey in the field started with a Bachelor's in Civil Engineering from JNTU Kakinada, India.</p>
+        </div>
 
         <!-- Portfolio Section -->
-        <section id="portfolio" class="animated-section">
+        <section id="portfolio" class="animated-section" onclick="document.getElementById('portfolio-content').scrollIntoView({ behavior: 'smooth' });">
             <h2>My Portfolio</h2>
-            <!-- Project Cards with details from CV -->
-            <div class="project-card">
-                <h3>Using Machine Learning and Artificial Neural Networks for Analysis of Cologne Residential Land Market</h3>
-                <p>Master Project, MSc GIS and Spatial Development</p>
-                <p>April 2020 - April 2021</p>
-                <ul>
-                    <li>Made predictive data analysis using regression analysis and artificial neural networks</li>
-                    <li>Improved the accuracy of model prediction from 48% to 63%</li>
-                </ul>
-            </div>
-            <!-- More project cards here -->
         </section>
+        <div id="portfolio-content" class="sticky-note">
+            <h3>Using Machine Learning and Artificial Neural Networks for Analysis of Cologne Residential Land Market</h3>
+            <p>Master Project, MSc GIS and Spatial Development</p>
+            <p>April 2020 - April 2021</p>
+            <p>Made predictive data analysis using regression analysis and artificial neural networks. Improved the accuracy of model prediction from 48% to 63%.</p>
+        </div>
 
         <!-- Work Experience Section -->
-        <section id="work-experience" class="animated-section">
+        <section id="work-experience" class="animated-section" onclick="document.getElementById('work-experience-content').scrollIntoView({ behavior: 'smooth' });">
             <h2>Work Experience</h2>
-            <!-- Work Cards with details from CV -->
-            <div class="work-card">
-                <h3>Data Scientist - University of Jena</h3>
-                <p>Jan 2023 - June 2023</p>
-                <ul>
-                    <li>Utilized OpenCV and Python for map restoration, enabling image segmentation tasks</li>
-                    <li>Conducted a study on image stitching algorithms, enhancing map repair processes</li>
-                </ul>
-            </div>
-            <!-- More work cards here -->
         </section>
+        <div id="work-experience-content" class="sticky-note">
+            <h3>Data Scientist - University of Jena</h3>
+            <p>Jan 2023 - June 2023</p>
+            <p>Utilized OpenCV and Python for map restoration, enabling image segmentation tasks. Conducted a study on image stitching algorithms, enhancing map repair processes.</p>
+        </div>
 
         <!-- Contact Section -->
-        <section id="contact" class="animated-section">
+        <section id="contact" class="animated-section" onclick="document.getElementById('contact-content').scrollIntoView({ behavior: 'smooth' });">
             <h2>Contact Me</h2>
+        </section>
+        <div id="contact-content" class="sticky-note">
+            <h3>Contact Me</h3>
             <a href="mailto:purnasatichandrala@gmail.com" class="contact-link">Email: purnasatichandrala@aol.com</a>
             <a href="https://www.linkedin.com/in/purnasatichandrala" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
             <a href="https://www.github.com/satichandrala" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
-        </section>
+        </div>
     </main>
 
     <!-- Scroll to Top Button -->
