@@ -19,11 +19,11 @@
         }
 
         body {
-            margin: 2rem;
+            margin: 0;
             color: #3a3a3a;
             line-height: 1.6;
             font-size: 16px;
-            background-color: #f7f3eb;
+            overflow: hidden;
         }
 
         h1,
@@ -31,20 +31,44 @@
             color: #4b3832;
         }
 
-        /* Header */
-        header {
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 2;
+        /* Opening Screen */
+        #openingScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 3;
         }
 
-        header h1 {
-            background: linear-gradient(90deg, #c1a17b, #eddcc8);
-            padding: 15px;
-            border-radius: 16px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            color: #4b3832;
+        #openingScreenContent {
+            position: relative;
+            text-align: center;
+            color: #ffffff;
+            z-index: 4;
+        }
+
+        #openingScreenContent h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        #openingScreenContent button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            background-color: #a0522d;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #openingScreenContent button:hover {
+            background-color: #b45a3c;
         }
 
         /* Video Background */
@@ -59,6 +83,23 @@
             opacity: 0.8;
         }
 
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+            display: none;
+        }
+
+        header h1 {
+            background: linear-gradient(90deg, #c1a17b, #eddcc8);
+            padding: 15px;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            color: #4b3832;
+        }
+
         /* Navigation */
         nav {
             text-align: center;
@@ -66,6 +107,7 @@
             padding-bottom: 1rem;
             position: relative;
             z-index: 2;
+            display: none;
         }
 
         nav a {
@@ -87,6 +129,7 @@
             text-align: center;
             position: relative;
             z-index: 2;
+            display: none;
         }
 
         section {
@@ -197,6 +240,7 @@
             color: #4b3832;
             background-color: #f8efe4;
             border-top: 1px solid #dfc2a1;
+            display: none;
         }
 
         /* Dynamic Content Animation */
@@ -221,6 +265,15 @@
         <source src="/mnt/data/103102383.webm" type="video/webm">
         Your browser does not support the video tag.
     </video>
+
+    <!-- Opening Screen -->
+    <div id="openingScreen">
+        <div id="openingScreenContent">
+            <h1>Welcome to My Website</h1>
+            <p>Purna Sati Chandrala's Portfolio</p>
+            <button onclick="enterSite()">Enter</button>
+        </div>
+    </div>
 
     <!-- Header -->
     <header>
@@ -332,4 +385,32 @@
     <!-- Interactivity Scripts -->
     <script>
         // Scroll to top functionality
-        let scrollToTopBtn = document.getElement
+        let scrollToTopBtn = document.getElementById('scrollToTop');
+
+        scrollToTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Opening screen hide and reveal content functionality
+        function enterSite() {
+            document.getElementById('openingScreen').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            document.querySelector('header').style.display = 'block';
+            document.querySelector('nav').style.display = 'block';
+            document.querySelector('main').style.display = 'block';
+            document.querySelector('footer').style.display = 'block';
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Purna Sati Chandrala. All rights reserved.</p>
+    </footer>
