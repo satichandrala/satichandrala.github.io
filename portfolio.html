@@ -47,15 +47,16 @@
             color: #4b3832;
         }
 
-        /* Network Animation Canvas */
-        #networkCanvas {
+        /* Video Background */
+        #networkVideo {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100vh;
+            object-fit: cover;
             z-index: 1;
-            background: #f7f3eb;
+            opacity: 0.8;
         }
 
         /* Navigation */
@@ -215,8 +216,11 @@
 </head>
 
 <body>
-    <!-- Network Animation Canvas -->
-    <canvas id="networkCanvas"></canvas>
+    <!-- Video Background -->
+    <video id="networkVideo" autoplay loop muted>
+        <source src="/mnt/data/103102383.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
 
     <!-- Header -->
     <header>
@@ -256,4 +260,76 @@
                 </div>
             </div>
             <div class="skill">
-                <span class="skill-name">Machine Learning</
+                <span class="skill-name">Machine Learning</span>
+                <div class="skill-bar">
+                    <div class="skill-bar-level" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">GIS & Geospatial Analysis</span>
+                <div class="skill-bar">
+                    <div class="skill-bar-level" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">Data Visualization</span>
+                <div class="skill-bar">
+                    <div class="skill-bar-level" style="width: 75%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="animated-section" onclick="document.getElementById('portfolio-content').scrollIntoView({ behavior: 'smooth' });">
+            <h2>My Portfolio</h2>
+        </section>
+        <div id="portfolio-content" class="sticky-note">
+            <h3>Using Machine Learning and Artificial Neural Networks for Analysis of Cologne Residential Land Market</h3>
+            <p>Master Project, MSc GIS and Spatial Development</p>
+            <p>April 2020 - April 2021</p>
+            <p>Made predictive data analysis using regression analysis and artificial neural networks. Improved the accuracy of model prediction from 48% to 63%.</p>
+            <h3>Visualization of Travel Time Maps of Bonn</h3>
+            <p>Location-Based Services, MSc GIS and Spatial Development</p>
+            <p>April 2020 - Aug 2020</p>
+            <p>Developed an Android Application for travel time maps in Bonn. Analyzed the streets of Bonn using ArcGIS.</p>
+            <h3>Developing a Geoinformation System for Interdisciplinary Research Data Management</h3>
+            <p>Data Management for Interdisciplinary Research, MSc GIS and Spatial Development</p>
+            <p>September 2020 - February 2021</p>
+            <p>Provided solution for Research Data Management using GIS, RDF Database, and SQL. Developed an ontology for metadata and wrote SPARQL queries.</p>
+        </div>
+
+        <!-- Work Experience Section -->
+        <section id="work-experience" class="animated-section" onclick="document.getElementById('work-experience-content').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Work Experience</h2>
+        </section>
+        <div id="work-experience-content" class="sticky-note">
+            <h3>Data Scientist - University of Jena</h3>
+            <p>Jan 2023 - June 2023</p>
+            <p>Utilized OpenCV and Python for map restoration, enabling image segmentation tasks. Conducted a study on image stitching algorithms, enhancing map repair processes.</p>
+            <h3>Spatial Data Analyst - GESIS - Leibniz-Institut für Sozialwissenschaften</h3>
+            <p>May 2021 - Current Job</p>
+            <p>Digitized and classified scanned land use maps of 1940s. Georeferenced old maps using QGIS and prepared training manuals. Communicated with researchers from over 10 different countries about data usage agreements.</p>
+            <h3>Graduate Research Assistant - Ruhr-Universität Bochum</h3>
+            <p>Jan 2022 - Nov 2022</p>
+            <p>Developed data pipelines to download Sentinel-1 and 2 satellite data into the data lake using Python. Created UI designs for the company’s website and performed data analysis to create visualizations.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="animated-section" onclick="document.getElementById('contact-content').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Contact Me</h2>
+        </section>
+        <div id="contact-content" class="sticky-note">
+            <h3>Contact Me</h3>
+            <a href="mailto:purnasatichandrala@gmail.com" class="contact-link">Email: purnasatichandrala@aol.com</a>
+            <a href="https://www.linkedin.com/in/purnasatichandrala" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
+            <a href="https://www.github.com/satichandrala" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+        </div>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop">Scroll to Top</button>
+
+    <!-- Interactivity Scripts -->
+    <script>
+        // Scroll to top functionality
+        let scrollToTopBtn = document.getElement
