@@ -23,12 +23,12 @@
             color: #333;
             line-height: 1.6;
             font-size: 16px;
-            background-color: #f8f3e7;
+            background-color: #f3efe0;
         }
 
         h1,
         h2 {
-            color: #5b4636;
+            color: #3e2723;
         }
 
         /* Header */
@@ -38,10 +38,11 @@
         }
 
         header h1 {
-            background: linear-gradient(90deg, #e4cfa3, #f1e1c3);
-            padding: 10px;
+            background: linear-gradient(90deg, #d7a977, #f1c40f);
+            padding: 15px;
             border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #3e2723;
         }
 
         /* Navigation */
@@ -54,14 +55,15 @@
         nav a {
             margin: 0 1rem;
             text-decoration: none;
-            color: #5b4636;
-            padding: 8px 16px;
+            color: #3e2723;
+            padding: 10px 20px;
             border-radius: 8px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         nav a:hover {
-            background-color: #d7c3a3;
+            background-color: #ffeb3b;
+            color: #4e342e;
         }
 
         /* Main Content */
@@ -72,8 +74,8 @@
         section {
             margin-bottom: 2rem;
             padding: 2rem;
-            border-radius: 0.6rem;
-            background-color: #e4cfa3;
+            border-radius: 0.8rem;
+            background-color: #ffcc80;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             transition: transform 0.3s;
@@ -85,8 +87,8 @@
 
         /* Sticky Note Style Cards */
         .sticky-note {
-            background-color: #fff;
-            border: 2px dashed #d7c3a3;
+            background-color: #fff3e0;
+            border: 2px dashed #ffab40;
             border-radius: 16px;
             padding: 20px;
             margin-bottom: 16px;
@@ -96,11 +98,11 @@
         }
 
         .sticky-note:hover {
-            transform: rotate(-2deg) translateY(-10px);
+            transform: rotate(-1deg) translateY(-10px);
         }
 
         .sticky-note h3 {
-            color: #5b4636;
+            color: #bf360c;
             margin-bottom: 8px;
         }
 
@@ -112,13 +114,13 @@
         .contact-link {
             display: block;
             margin-top: 0.5rem;
-            color: #5b4636;
+            color: #bf360c;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .contact-link:hover {
-            color: #a37658;
+            color: #e64a19;
         }
 
         /* Scroll to Top Button */
@@ -127,7 +129,7 @@
             bottom: 20px;
             right: 20px;
             display: none;
-            background-color: #a37658;
+            background-color: #e64a19;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -137,7 +139,7 @@
         }
 
         #scrollToTop:hover {
-            background-color: #8b5d3e;
+            background-color: #d84315;
         }
 
         /* Footer */
@@ -145,7 +147,7 @@
             text-align: center;
             padding: 1rem;
             font-size: 14px;
-            color: #5b4636;
+            color: #3e2723;
         }
 
         /* Dynamic Content Animation */
@@ -190,6 +192,7 @@
             <h3>About Me</h3>
             <p>I'm Purna Sati Chandrala, a passionate data scientist and geospatial expert based in Bonn, Germany. I hold a Master's degree in Geoinformation and Spatial Development from the University of Bonn.</p>
             <p>With a background in Civil Engineering and extensive experience in machine learning, GIS, and data management, I bring a unique blend of skills to the table. My journey in the field started with a Bachelor's in Civil Engineering from JNTU Kakinada, India.</p>
+            <p>Throughout my academic and professional career, I have excelled in various roles, including Data Scientist at the University of Jena, Spatial Data Analyst at GESIS - Leibniz-Institut für Sozialwissenschaften, and Graduate Research Assistant at Ruhr-Universität Bochum. My work involves utilizing technologies such as OpenCV, Python, GIS libraries (ArcGIS, QGIS, GDAL), and machine learning frameworks (TensorFlow, Keras, PyTorch).</p>
         </div>
 
         <!-- Portfolio Section -->
@@ -201,6 +204,14 @@
             <p>Master Project, MSc GIS and Spatial Development</p>
             <p>April 2020 - April 2021</p>
             <p>Made predictive data analysis using regression analysis and artificial neural networks. Improved the accuracy of model prediction from 48% to 63%.</p>
+            <h3>Visualization of Travel Time Maps of Bonn</h3>
+            <p>Location-Based Services, MSc GIS and Spatial Development</p>
+            <p>April 2020 - Aug 2020</p>
+            <p>Developed an Android Application for travel time maps in Bonn. Analyzed the streets of Bonn using ArcGIS.</p>
+            <h3>Developing a Geoinformation System for Interdisciplinary Research Data Management</h3>
+            <p>Data Management for Interdisciplinary Research, MSc GIS and Spatial Development</p>
+            <p>September 2020 - February 2021</p>
+            <p>Provided solution for Research Data Management using GIS, RDF Database, and SQL. Developed an ontology for metadata and wrote SPARQL queries.</p>
         </div>
 
         <!-- Work Experience Section -->
@@ -211,6 +222,12 @@
             <h3>Data Scientist - University of Jena</h3>
             <p>Jan 2023 - June 2023</p>
             <p>Utilized OpenCV and Python for map restoration, enabling image segmentation tasks. Conducted a study on image stitching algorithms, enhancing map repair processes.</p>
+            <h3>Spatial Data Analyst - GESIS - Leibniz-Institut für Sozialwissenschaften</h3>
+            <p>May 2021 - Current Job</p>
+            <p>Digitized and classified scanned land use maps of 1940s. Georeferenced old maps using QGIS and prepared training manuals. Communicated with researchers from over 10 different countries about data usage agreements.</p>
+            <h3>Graduate Research Assistant - Ruhr-Universität Bochum</h3>
+            <p>Jan 2022 - Nov 2022</p>
+            <p>Developed data pipelines to download Sentinel-1 and 2 satellite data into the data lake using Python. Created UI designs for the company’s website and performed data analysis to create visualizations.</p>
         </div>
 
         <!-- Contact Section -->
