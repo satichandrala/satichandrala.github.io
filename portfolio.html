@@ -38,11 +38,31 @@
         }
 
         header h1 {
-            background: linear-gradient(90deg, #c8a165, #edd7b2);
+            background: linear-gradient(90deg, #b2925f, #ddc9a3);
             padding: 15px;
             border-radius: 16px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             color: #4a3f35;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 100px 20px;
+            border-radius: 16px;
+            color: #ffffff;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
         }
 
         /* Navigation */
@@ -110,6 +130,35 @@
             margin-bottom: 10px;
         }
 
+        /* Skill Bars */
+        .skills {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .skill {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .skill-name {
+            font-weight: bold;
+            color: #4a3f35;
+        }
+
+        .skill-bar {
+            background-color: #f4e7d1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .skill-bar-level {
+            height: 20px;
+            background-color: #a0522d;
+            transition: width 1s ease-in-out;
+        }
+
         /* Contact Links */
         .contact-link {
             display: block;
@@ -170,10 +219,11 @@
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Purna Sati Chandrala's Portfolio</h1>
-    </header>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Hello, I'm Purna Sati Chandrala</h1>
+        <p>A passionate data scientist and geospatial expert</p>
+    </div>
 
     <!-- Navigation -->
     <nav>
@@ -185,7 +235,6 @@
 
     <!-- Main Content -->
     <main>
-
         <!-- About Section -->
         <section id="about" class="animated-section" onclick="document.getElementById('about-content').scrollIntoView({ behavior: 'smooth' });">
             <h2>About Me</h2>
@@ -195,6 +244,37 @@
             <p>I'm Purna Sati Chandrala, a passionate data scientist and geospatial expert based in Bonn, Germany. I hold a Master's degree in Geoinformation and Spatial Development from the University of Bonn.</p>
             <p>With a background in Civil Engineering and extensive experience in machine learning, GIS, and data management, I bring a unique blend of skills to the table. My journey in the field started with a Bachelor's in Civil Engineering from JNTU Kakinada, India.</p>
             <p>Throughout my academic and professional career, I have excelled in various roles, including Data Scientist at the University of Jena, Spatial Data Analyst at GESIS - Leibniz-Institut für Sozialwissenschaften, and Graduate Research Assistant at Ruhr-Universität Bochum. My work involves utilizing technologies such as OpenCV, Python, GIS libraries (ArcGIS, QGIS, GDAL), and machine learning frameworks (TensorFlow, Keras, PyTorch).</p>
+        </div>
+
+        <!-- Skills Section -->
+        <section id="skills" class="animated-section" onclick="document.getElementById('skills-content').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Skills</h2>
+        </section>
+        <div id="skills-content" class="skills">
+            <div class="skill">
+                <span class="skill-name">Python</span>
+                <div class="skill-bar">
+                    <div class="skill-bar-level" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">Machine Learning</span>
+                <div class="skill-bar">
+                    <div class="skill-bar-level" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">GIS & Geospatial Analysis</span>
+                <div class="skill-bar">
+                    <div class="skill-bar-level" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">Data Visualization</span>
+                <div class="skill-bar">
+                    <div class="skill-bar-level" style="width: 75%;"></div>
+                </div>
+            </div>
         </div>
 
         <!-- Portfolio Section -->
@@ -267,7 +347,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Purna Sati Chandrala. All rights reserved.</p>
+        <p>&copy; 2023 Purna Sati Chandrala. All rights reserved.</p>
     </footer>
 </body>
 
