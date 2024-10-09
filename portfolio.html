@@ -23,11 +23,12 @@
             color: #333;
             line-height: 1.6;
             font-size: 16px;
+            background-color: #f8f3e7;
         }
 
         h1,
         h2 {
-            color: #444;
+            color: #5b4636;
         }
 
         /* Header */
@@ -36,18 +37,31 @@
             margin-bottom: 2rem;
         }
 
+        header h1 {
+            background: linear-gradient(90deg, #e4cfa3, #f1e1c3);
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
         /* Navigation */
         nav {
             text-align: center;
             margin-bottom: 2rem;
-            border-bottom: 1px solid #ccc;
             padding-bottom: 1rem;
         }
 
         nav a {
             margin: 0 1rem;
             text-decoration: none;
-            color: inherit;
+            color: #5b4636;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #d7c3a3;
         }
 
         /* Main Content */
@@ -57,42 +71,46 @@
 
         section {
             margin-bottom: 2rem;
-            padding: 1rem;
-            border-radius: 0.3rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            border-radius: 0.6rem;
+            background-color: #e4cfa3;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        /* Project Cards */
-        .project-card {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 16px;
-            margin-bottom: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-card h3 {
-            margin-bottom: 12px;
-        }
-
-        .project-card ul {
-            list-style-type: disc;
-            margin-left: 24px;
-        }
-
-        /* Work Experience Cards */
+        /* Project & Work Cards */
+        .project-card,
         .work-card {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 16px;
+            background-color: #fff;
+            border: 1px solid #d7c3a3;
+            border-radius: 16px;
+            padding: 20px;
             margin-bottom: 16px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .project-card h3,
+        .work-card h3 {
+            color: #5b4636;
+        }
+
+        .project-card ul,
+        .work-card ul {
+            list-style-type: circle;
+            margin-left: 24px;
         }
 
         /* Contact Links */
         .contact-link {
             display: block;
             margin-top: 0.5rem;
+            color: #5b4636;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: #a37658;
         }
 
         /* Scroll to Top Button */
@@ -101,17 +119,17 @@
             bottom: 20px;
             right: 20px;
             display: none;
-            background-color: #007BFF;
+            background-color: #a37658;
             color: white;
             border: none;
             padding: 10px 20px;
             font-size: 18px;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 8px;
         }
 
         #scrollToTop:hover {
-            background-color: #0056b3;
+            background-color: #8b5d3e;
         }
 
         /* Footer */
@@ -119,7 +137,21 @@
             text-align: center;
             padding: 1rem;
             font-size: 14px;
-            color: #888;
+            color: #5b4636;
+        }
+
+        /* Dynamic Content Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .animated-section {
+            animation: fadeIn 1.5s ease-in-out;
         }
     </style>
 </head>
@@ -143,38 +175,22 @@
     <main>
 
         <!-- About Section -->
-        <section id="about">
+        <section id="about" class="animated-section">
             <h2>About Me</h2>
-            <p>I'm Purna Sati Chandrala, a passionate data scientist and geospatial expert based in Bonn, Germany. I
-                hold a
+            <p>I'm Purna Sati Chandrala, a passionate data scientist and geospatial expert based in Bonn, Germany. I hold a
                 Master's degree in Geoinformation and Spatial Development from the University of Bonn.</p>
 
-            <p>With a background in Civil Engineering and extensive experience in machine learning, GIS, and data
-                management, I
+            <p>With a background in Civil Engineering and extensive experience in machine learning, GIS, and data management, I
                 bring a unique blend of skills to the table. My journey in the field started with a Bachelor's in Civil
                 Engineering from JNTU Kakinada, India.</p>
-
-            <p>Throughout my academic and professional career, I have excelled in various roles, including a Data
-                Scientist at the
-                University of Jena, a Spatial Data Analyst at GESIS - Leibniz-Institut für Sozialwissenschaften, and a
-                Graduate
-                Research Assistant at Ruhr-Universität Bochum. My work involves utilizing technologies such
-                as
-                OpenCV, Python, GIS libraries (ArcGIS, QGIS, GDAL), and machine learning frameworks (TensorFlow, Keras,
-                PyTorch).</p>
-
-            <p>Feel free to explore my portfolio to learn more about my projects and contributions. Connect with me on
-                LinkedIn and
-                GitHub for the latest updates.</p>
         </section>
 
         <!-- Portfolio Section -->
-        <section id="portfolio">
+        <section id="portfolio" class="animated-section">
             <h2>My Portfolio</h2>
             <!-- Project Cards with details from CV -->
             <div class="project-card">
-                <h3>Using Machine Learning and Artificial Neural Networks for Analysis of Cologne Residential Land
-                    Market</h3>
+                <h3>Using Machine Learning and Artificial Neural Networks for Analysis of Cologne Residential Land Market</h3>
                 <p>Master Project, MSc GIS and Spatial Development</p>
                 <p>April 2020 - April 2021</p>
                 <ul>
@@ -182,33 +198,11 @@
                     <li>Improved the accuracy of model prediction from 48% to 63%</li>
                 </ul>
             </div>
-
-            <div class="project-card">
-                <h3>Visualization of Travel Time Maps of Bonn</h3>
-                <p>Location-Based Services, MSc GIS and Spatial Development</p>
-                <p>April 2020 - Aug 2020</p>
-                <ul>
-                    <li>Developed an Android Application for travel time maps in Bonn</li>
-                    <li>Analysis of the streets of Bonn using ArcGIS</li>
-                </ul>
-            </div>
-
-            <div class="project-card">
-                <h3>Developing a Geoinformation System for the Interdisciplinary Research Data Management</h3>
-                <p>Data Management for Interdisciplinary Research, MSc GIS and Spatial Development</p>
-                <p>September 2020 - February 2021</p>
-                <ul>
-                    <li>Provided solution for Research Data Management of the Agriculture field data using GIS, RDF
-                        Database,
-                        SQL</li>
-                    <li>Worked on developing an Ontology for the metadata and wrote SPARQL queries</li>
-                    <li>Developed a webpage for Spatial Data</li>
-                </ul>
-            </div>
+            <!-- More project cards here -->
         </section>
 
         <!-- Work Experience Section -->
-        <section id="work-experience">
+        <section id="work-experience" class="animated-section">
             <h2>Work Experience</h2>
             <!-- Work Cards with details from CV -->
             <div class="work-card">
@@ -219,99 +213,15 @@
                     <li>Conducted a study on image stitching algorithms, enhancing map repair processes</li>
                 </ul>
             </div>
-
-            <div class="work-card">
-                <h3>Spatial Data Analyst - GESIS - Leibniz-Institut für Sozialwissenschaften</h3>
-                <p>May 2021 - Current Job</p>
-                <ul>
-                    <li>Digitized and classified scanned land use (LULC) maps of 1940s from World War II at 60% accuracy
-                        with Classification and Regression Trees (CART) using R</li>
-                    <li>Georeferenced old maps using QGIS, prepared training manuals</li>
-                    <li>Contributed to internal research on Statistical Disclosure Control, Output Policies, and better
-                        ways
-                        to protect metadata usage at the GESIS Secure Data Centre</li>
-                    <li>Communicated with researchers from over 10 different countries about data usage and data use
-                        agreements, demonstrating strong intercultural communication skills</li>
-                </ul>
-            </div>
-
-            <div class="work-card">
-                <h3>Graduate Research Assistant - Ruhr-Universität Bochum</h3>
-                <p>Jan 2022 - Nov 2022</p>
-                <ul>
-                    <li>Developed data pipelines to download Sentinel-1 and 2 satellite data into the data lake using
-                        Python</li>
-                    <li>Made UI Designs for the company’s website, exploratory data analysis, and visualizations using
-                        Python to create heat maps</li>
-                </ul>
-            </div>
-
-            <div class="work-card">
-                <h3>Machine Learning Data Associate - Amazon Dev. Centre Pvt Ltd India</h3>
-                <p>July 2017 - Sep 2019</p>
-                <ul>
-                    <li>Helped ML Engineers with natural language analysis to extract better data</li>
-                    <li>Maintained a consistent accuracy of 98% to 99% to annotate text data and verify the accuracy of
-                        ASR, NLP recognition, and response of the conversational AI</li>
-                </ul>
-            </div>
-
-            <div class="work-card">
-                <h3>Business Engineer - Asha FlyAsh Bricks</h3>
-                <p>June 2016 - June 2017</p>
-                <ul>
-                    <li>Worked in the Engineering department and client management</li>
-                    <li>Improved manufacturing and production of bricks and increased sales by 70%</li>
-                </ul>
-            </div>
+            <!-- More work cards here -->
         </section>
 
-        <!-- Honors and Awards Section -->
-        <section id="honors-awards">
-            <h2>Honors and Awards</h2>
-            <ul>
-                <li>Received Best Project Award for Bachelor Thesis in 2016 during graduation</li>
-                <li>Alumni Merit Scholarship recipient for three consecutive academic years, 2012-2015</li>
-            </ul>
-        </section>
-        
-        <!-- Volunteering Section -->
-        <section id="volunteering">
-            <h2>Volunteering</h2>
-            <p>Ignitus (March 2021 - Feb 2022)</p>
-            <ul>
-                <li>Team Leader - ML Courses Design</li>
-                <li>Managed a team of four and conducted code reviews on GitHub</li>
-            </ul>
-        
-            <p>Freelancing (March 2021 - Feb 2022)</p>
-            <ul>
-                <li>Tutoring and Career Counselling</li>
-                <li>Tutored primary school students and counseled high school students in choosing their career path</li>
-            </ul>
-        </section>
-        
-        <!-- Publications Section -->
-        <section id="publications">
-            <h2>Publications</h2>
-            <p>Urbanistica INFORMAZIONI, November 2021</p>
-            <ul>
-                <li>Chandrala, P.S. and Teichert, E. (2021) ‘Issues on urban planning and governance in India. Temporary
-                    utilization of public spaces for religious events’, urbanistica INFORMAZIONI, pp. 98–100.</li>
-                <li>Chandrala, P.S. and Surisetty, S.C. (2021) ‘Issues on urban planning and governance in India. Digitization
-                    and
-                    e-Governance’, urbanistica INFORMAZIONI, November, pp. 101–103.</li>
-            </ul>
-        </section>
-
-                <!-- Contact Section -->
-        <section id="contact">
+        <!-- Contact Section -->
+        <section id="contact" class="animated-section">
             <h2>Contact Me</h2>
             <a href="mailto:purnasatichandrala@gmail.com" class="contact-link">Email: purnasatichandrala@aol.com</a>
-            <a href="https://www.linkedin.com/in/purnasatichandrala" target="_blank" rel="noopener noreferrer"
-                class="contact-link">LinkedIn</a>
-            <a href="https://www.github.com/satichandrala" target="_blank" rel="noopener noreferrer"
-                class="contact-link">GitHub</a>
+            <a href="https://www.linkedin.com/in/purnasatichandrala" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
+            <a href="https://www.github.com/satichandrala" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
         </section>
     </main>
 
