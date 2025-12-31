@@ -19,7 +19,9 @@
             --accent-dark: #7f97b3;
             --accent-soft: rgba(155, 179, 204, 0.22);
             --amber: #b6c7dd;
-            --grid: rgba(148, 163, 184, 0.03);
+            --grid: rgba(148, 163, 184, 0.06);
+            --tech: #78c7ff;
+            --tech-soft: rgba(120, 199, 255, 0.14);
             --shadow: rgba(0, 0, 0, 0.55);
             --glow: transparent;
             --border: rgba(148, 163, 184, 0.2);
@@ -50,9 +52,12 @@
         body {
             color: var(--ink);
             background:
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+                linear-gradient(180deg, var(--grid) 1px, transparent 1px),
                 radial-gradient(900px 420px at 15% 0%, rgba(155, 179, 204, 0.08), transparent 60%),
-                radial-gradient(900px 420px at 100% 10%, rgba(199, 208, 219, 0.06), transparent 60%),
+                radial-gradient(900px 420px at 100% 10%, rgba(120, 199, 255, 0.08), transparent 60%),
                 linear-gradient(180deg, #0b0f14 0%, #121824 55%, #0b0f14 100%);
+            background-size: 64px 64px, 64px 64px, auto, auto, auto;
             min-height: 100vh;
             line-height: 1.6;
             scroll-behavior: smooth;
@@ -218,7 +223,7 @@
         }
 
         .nav-bar a:hover {
-            background: rgba(143, 163, 184, 0.16);
+            background: var(--tech-soft);
             transform: translateY(-2px);
         }
 
@@ -236,7 +241,7 @@
         .section-title span {
             width: 42px;
             height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--amber));
+            background: linear-gradient(90deg, var(--accent), var(--tech));
             border-radius: 999px;
         }
 
@@ -270,10 +275,10 @@
         .tag {
             padding: 6px 12px;
             border-radius: 999px;
-            background: rgba(143, 163, 184, 0.12);
+            background: rgba(120, 199, 255, 0.12);
             color: var(--accent);
             font-size: 0.85rem;
-            border: 1px solid rgba(143, 163, 184, 0.28);
+            border: 1px solid rgba(120, 199, 255, 0.28);
         }
 
         .timeline {
