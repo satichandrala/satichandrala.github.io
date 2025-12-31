@@ -61,6 +61,23 @@
             min-height: 100vh;
             line-height: 1.6;
             scroll-behavior: smooth;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.02) 0,
+                rgba(255, 255, 255, 0.02) 1px,
+                transparent 1px,
+                transparent 4px
+            );
+            pointer-events: none;
+            opacity: 0.4;
+            z-index: 0;
         }
 
         h1,
@@ -74,6 +91,8 @@
             max-width: 1160px;
             margin: 0 auto;
             padding: 32px 20px 80px;
+            position: relative;
+            z-index: 1;
         }
 
         .hero {
@@ -245,6 +264,16 @@
             border-radius: 999px;
         }
 
+        .section-title::after {
+            content: "SECTION";
+            margin-left: auto;
+            font-family: "IBM Plex Mono", "Courier New", monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: rgba(199, 208, 219, 0.6);
+        }
+
         .grid {
             display: grid;
             gap: 18px;
@@ -386,6 +415,16 @@
             color: var(--terminal-green);
         }
 
+        .terminal .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1em;
+            background: var(--terminal-green);
+            margin-left: 6px;
+            animation: blink 1.1s steps(2, start) infinite;
+            vertical-align: -2px;
+        }
+
         .fade-in {
             animation: fadeIn 0.8s ease both;
         }
@@ -413,6 +452,18 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        @keyframes blink {
+            0%,
+            49% {
+                opacity: 1;
+            }
+
+            50%,
+            100% {
+                opacity: 0;
             }
         }
 
@@ -513,7 +564,7 @@
                             <div><span>$</span> role=technical-consultant</div>
                             <div><span>$</span> focus=plm,workflow,automation</div>
                             <div><span>$</span> stack=xml,js,mssql,bpmn,camunda</div>
-                            <div><span>$</span> research=ml,geospatial,pipelines</div>
+                            <div><span>$</span> research=ml,geospatial,pipelines<span class="cursor"></span></div>
                         </div>
                     </div>
                 </div>
