@@ -10,19 +10,22 @@
         @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap");
 
         :root {
-            --ink: #e5e7eb;
-            --ink-soft: #cbd5f5;
-            --paper: #0b1120;
-            --panel: rgba(15, 23, 42, 0.85);
-            --panel-strong: rgba(15, 23, 42, 0.95);
-            --accent: #60a5fa;
-            --accent-dark: #3b82f6;
-            --accent-soft: rgba(96, 165, 250, 0.16);
-            --mint: #22d3ee;
-            --grid: rgba(148, 163, 184, 0.08);
-            --shadow: rgba(2, 6, 23, 0.6);
-            --glow: rgba(59, 130, 246, 0.24);
-            --border: rgba(148, 163, 184, 0.2);
+            --ink: #e8e4df;
+            --ink-soft: #cfc7bf;
+            --paper: #0c0d11;
+            --panel: rgba(20, 21, 27, 0.92);
+            --panel-strong: rgba(20, 21, 27, 0.98);
+            --accent: #f59e0b;
+            --accent-dark: #d97706;
+            --accent-soft: rgba(245, 158, 11, 0.16);
+            --amber: #fbbf24;
+            --grid: rgba(148, 163, 184, 0.06);
+            --shadow: rgba(0, 0, 0, 0.6);
+            --glow: rgba(245, 158, 11, 0.18);
+            --border: rgba(148, 163, 184, 0.18);
+            --terminal-bg: #0b0b0f;
+            --terminal-border: #2b2b33;
+            --terminal-green: #34d399;
         }
 
         * {
@@ -49,9 +52,9 @@
             background:
                 linear-gradient(90deg, var(--grid) 1px, transparent 1px),
                 linear-gradient(180deg, var(--grid) 1px, transparent 1px),
-                radial-gradient(900px 360px at 10% 0%, rgba(96, 165, 250, 0.16), transparent 60%),
-                radial-gradient(900px 360px at 100% 10%, rgba(34, 211, 238, 0.12), transparent 60%),
-                linear-gradient(160deg, #0b1120 0%, #0f172a 100%);
+                radial-gradient(900px 360px at 8% 0%, rgba(245, 158, 11, 0.12), transparent 60%),
+                radial-gradient(900px 360px at 100% 10%, rgba(148, 163, 184, 0.12), transparent 60%),
+                linear-gradient(160deg, #0c0d11 0%, #11131a 100%);
             background-size: 44px 44px, 44px 44px, auto, auto, auto;
             min-height: 100vh;
             line-height: 1.6;
@@ -120,7 +123,7 @@
             color: var(--accent);
             font-size: 0.85rem;
             font-weight: 600;
-            border: 1px solid rgba(96, 165, 250, 0.35);
+            border: 1px solid rgba(245, 158, 11, 0.35);
         }
 
         .hero-actions {
@@ -137,12 +140,12 @@
             padding: 12px 18px;
             border-radius: 10px;
             background: var(--accent);
-            color: #0b1120;
+            color: #11131a;
             text-decoration: none;
             font-weight: 600;
             letter-spacing: 0.02em;
             border: none;
-            box-shadow: 0 12px 22px rgba(37, 99, 235, 0.24);
+            box-shadow: 0 12px 22px rgba(245, 158, 11, 0.24);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             cursor: pointer;
         }
@@ -150,7 +153,7 @@
         .button.secondary {
             background: transparent;
             color: var(--accent);
-            border: 1px solid rgba(96, 165, 250, 0.4);
+            border: 1px solid rgba(245, 158, 11, 0.4);
             box-shadow: none;
         }
 
@@ -185,8 +188,8 @@
         .stat {
             padding: 12px 14px;
             border-radius: 12px;
-            background: rgba(96, 165, 250, 0.08);
-            border: 1px solid rgba(96, 165, 250, 0.2);
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.2);
             font-size: 0.95rem;
         }
 
@@ -217,7 +220,7 @@
         }
 
         .nav-bar a:hover {
-            background: rgba(96, 165, 250, 0.18);
+            background: rgba(245, 158, 11, 0.18);
             transform: translateY(-2px);
         }
 
@@ -235,7 +238,7 @@
         .section-title span {
             width: 42px;
             height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--mint));
+            background: linear-gradient(90deg, var(--accent), var(--amber));
             border-radius: 999px;
         }
 
@@ -269,10 +272,10 @@
         .tag {
             padding: 6px 12px;
             border-radius: 10px;
-            background: rgba(96, 165, 250, 0.12);
+            background: rgba(245, 158, 11, 0.12);
             color: var(--accent);
             font-size: 0.85rem;
-            border: 1px solid rgba(96, 165, 250, 0.28);
+            border: 1px solid rgba(245, 158, 11, 0.28);
         }
 
         .timeline {
@@ -363,6 +366,21 @@
             color: rgba(226, 232, 240, 0.7);
             font-size: 0.9rem;
             text-align: center;
+        }
+
+        .terminal {
+            background: var(--terminal-bg);
+            border: 1px solid var(--terminal-border);
+            border-radius: 12px;
+            padding: 16px;
+            font-family: "JetBrains Mono", "Courier New", monospace;
+            font-size: 0.85rem;
+            color: #e5e7eb;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+        }
+
+        .terminal span {
+            color: var(--terminal-green);
         }
 
         .fade-in {
@@ -488,6 +506,12 @@
                         <p>Decision tree thesis for historical forest map classification with over 95% accuracy.</p>
                         <p>Automated satellite data pipelines across three sources.</p>
                         <p>PLM automation for uploads, exports, and workflow orchestration.</p>
+                        <div class="terminal" aria-label="Terminal style summary">
+                            <div><span>$</span> role=technical-consultant</div>
+                            <div><span>$</span> focus=plm,workflow,automation</div>
+                            <div><span>$</span> stack=xml,js,mssql,bpmn,camunda</div>
+                            <div><span>$</span> research=ml,geospatial,pipelines</div>
+                        </div>
                     </div>
                 </div>
             </section>
