@@ -7,17 +7,18 @@
     <title>Purna Sati Chandrala's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Manrope:wght@300;400;500;600&display=swap");
 
         :root {
-            --ink: #221c18;
-            --paper: #fbf7f2;
-            --mist: #f4ede4;
-            --copper: #b35a3c;
-            --forest: #1f5d53;
-            --olive: #7a6b4b;
-            --shadow: rgba(20, 16, 12, 0.12);
-            --glow: rgba(179, 90, 60, 0.18);
+            --ink: #1f1a16;
+            --paper: #f8f3ee;
+            --sand: #efe4d6;
+            --copper: #c15c3a;
+            --teal: #1f6b63;
+            --gold: #b48a4a;
+            --slate: #3b342e;
+            --shadow: rgba(20, 16, 12, 0.16);
+            --glow: rgba(193, 92, 58, 0.18);
         }
 
         * {
@@ -29,18 +30,29 @@
         h2,
         h3,
         p,
-        a {
+        a,
+        span,
+        button,
+        input,
+        textarea {
             margin: 0;
             padding: 0;
-            font-family: "Space Grotesk", "Segoe UI", sans-serif;
+            font-family: "Manrope", "Segoe UI", sans-serif;
         }
 
         body {
             color: var(--ink);
             background:
-                radial-gradient(600px 300px at 10% 0%, rgba(179, 90, 60, 0.18), transparent 60%),
-                radial-gradient(700px 360px at 100% 12%, rgba(31, 93, 83, 0.2), transparent 60%),
-                linear-gradient(160deg, #fbf7f2 0%, #efe4d6 100%);
+                repeating-linear-gradient(
+                    120deg,
+                    rgba(31, 26, 22, 0.03) 0,
+                    rgba(31, 26, 22, 0.03) 6px,
+                    transparent 6px,
+                    transparent 14px
+                ),
+                radial-gradient(700px 360px at 8% 0%, rgba(193, 92, 58, 0.18), transparent 60%),
+                radial-gradient(700px 360px at 100% 10%, rgba(31, 107, 99, 0.2), transparent 60%),
+                linear-gradient(155deg, #fbf7f2 0%, #efe4d6 100%);
             min-height: 100vh;
             line-height: 1.6;
             scroll-behavior: smooth;
@@ -54,41 +66,43 @@
         }
 
         .page {
-            max-width: 1120px;
+            max-width: 1160px;
             margin: 0 auto;
-            padding: 36px 20px 80px;
+            padding: 32px 20px 80px;
         }
 
         .hero {
             display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
             gap: 28px;
-            padding: 36px;
+            padding: 38px;
             border-radius: 28px;
-            background: rgba(255, 255, 255, 0.78);
-            border: 1px solid rgba(34, 28, 24, 0.1);
-            box-shadow: 0 28px 60px var(--shadow);
+            background: rgba(255, 255, 255, 0.86);
+            border: 1px solid rgba(31, 26, 22, 0.1);
+            box-shadow: 0 30px 64px var(--shadow);
             position: relative;
             overflow: hidden;
+            animation: rise 0.8s ease both;
         }
 
         .hero::after {
             content: "";
             position: absolute;
-            top: -80px;
-            right: -80px;
-            width: 200px;
-            height: 200px;
+            top: -90px;
+            right: -90px;
+            width: 220px;
+            height: 220px;
             background: var(--glow);
             border-radius: 999px;
             filter: blur(2px);
         }
 
         .hero h1 {
-            font-size: clamp(2.4rem, 3.8vw, 3.8rem);
+            font-size: clamp(2.4rem, 4vw, 4rem);
         }
 
         .hero p {
-            max-width: 620px;
+            max-width: 680px;
             font-size: 1.05rem;
         }
 
@@ -96,23 +110,24 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            margin-top: 16px;
         }
 
         .pill {
             padding: 6px 14px;
             border-radius: 999px;
-            background: rgba(31, 93, 83, 0.1);
-            color: var(--forest);
+            background: rgba(31, 107, 99, 0.1);
+            color: var(--teal);
             font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid rgba(31, 93, 83, 0.2);
+            font-weight: 600;
+            border: 1px solid rgba(31, 107, 99, 0.22);
         }
 
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
-            margin-top: 10px;
+            margin-top: 18px;
         }
 
         .button {
@@ -121,20 +136,21 @@
             gap: 8px;
             padding: 12px 18px;
             border-radius: 999px;
-            background: var(--forest);
+            background: var(--teal);
             color: #ffffff;
             text-decoration: none;
             font-weight: 600;
             letter-spacing: 0.02em;
             border: none;
-            box-shadow: 0 14px 24px rgba(31, 93, 83, 0.25);
+            box-shadow: 0 14px 24px rgba(31, 107, 99, 0.25);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
         }
 
         .button.secondary {
             background: transparent;
-            color: var(--forest);
-            border: 1px solid rgba(31, 93, 83, 0.3);
+            color: var(--teal);
+            border: 1px solid rgba(31, 107, 99, 0.3);
             box-shadow: none;
         }
 
@@ -142,30 +158,71 @@
             transform: translateY(-2px);
         }
 
-        nav {
+        .hero-panel {
+            display: grid;
+            gap: 16px;
+        }
+
+        .panel-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(31, 26, 22, 0.1);
+            border-radius: 20px;
+            padding: 18px;
+            box-shadow: 0 16px 30px rgba(20, 16, 12, 0.1);
+        }
+
+        .panel-card h3 {
+            color: var(--copper);
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .stat {
+            padding: 12px 14px;
+            border-radius: 16px;
+            background: rgba(31, 107, 99, 0.08);
+            border: 1px solid rgba(31, 107, 99, 0.18);
+            font-size: 0.95rem;
+        }
+
+        .nav-bar {
+            position: sticky;
+            top: 12px;
+            z-index: 10;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin: 24px 0 32px;
+            margin: 24px 0 34px;
+            padding: 10px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(31, 26, 22, 0.1);
+            box-shadow: 0 14px 28px rgba(20, 16, 12, 0.08);
+            animation: fadeIn 0.8s ease both;
         }
 
-        nav a {
+        .nav-bar a {
             text-decoration: none;
             color: var(--ink);
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(34, 28, 24, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(31, 26, 22, 0.12);
             padding: 8px 16px;
             border-radius: 999px;
             transition: transform 0.2s ease, background 0.2s ease;
         }
 
-        nav a:hover {
+        .nav-bar a:hover {
             background: #fff0e3;
             transform: translateY(-2px);
         }
 
         section {
-            margin-top: 40px;
+            margin-top: 42px;
         }
 
         .section-title {
@@ -176,7 +233,7 @@
         }
 
         .section-title span {
-            width: 40px;
+            width: 42px;
             height: 2px;
             background: var(--copper);
             border-radius: 999px;
@@ -190,8 +247,8 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.86);
-            border: 1px solid rgba(34, 28, 24, 0.1);
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(31, 26, 22, 0.1);
             border-radius: 22px;
             padding: 22px;
             box-shadow: 0 18px 40px var(--shadow);
@@ -212,10 +269,10 @@
         .tag {
             padding: 6px 12px;
             border-radius: 999px;
-            background: rgba(179, 90, 60, 0.1);
+            background: rgba(193, 92, 58, 0.1);
             color: var(--copper);
             font-size: 0.85rem;
-            border: 1px solid rgba(179, 90, 60, 0.25);
+            border: 1px solid rgba(193, 92, 58, 0.25);
         }
 
         .timeline {
@@ -225,10 +282,10 @@
         }
 
         .timeline-item {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.92);
             border-radius: 18px;
             padding: 18px 20px;
-            border: 1px solid rgba(34, 28, 24, 0.1);
+            border: 1px solid rgba(31, 26, 22, 0.1);
             box-shadow: 0 12px 24px rgba(20, 16, 12, 0.08);
         }
 
@@ -248,11 +305,21 @@
             margin-top: 20px;
         }
 
+        .recommendation {
+            font-size: 0.95rem;
+        }
+
+        .recommendation strong {
+            display: block;
+            margin-top: 10px;
+            color: var(--olive);
+        }
+
         .contact-card a {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--forest);
+            color: var(--teal);
             text-decoration: none;
             margin-bottom: 10px;
         }
@@ -277,7 +344,7 @@
             width: 100%;
             padding: 12px 14px;
             border-radius: 14px;
-            border: 1px solid rgba(34, 28, 24, 0.14);
+            border: 1px solid rgba(31, 26, 22, 0.14);
             background: #ffffff;
             font-family: inherit;
             font-size: 0.95rem;
@@ -288,18 +355,49 @@
             resize: vertical;
         }
 
-        .contact-form button {
-            justify-self: start;
-            cursor: pointer;
-        }
-
         footer {
             margin-top: 60px;
             padding: 24px 0 0;
-            border-top: 1px solid rgba(34, 28, 24, 0.12);
-            color: rgba(34, 28, 24, 0.7);
+            border-top: 1px solid rgba(31, 26, 22, 0.12);
+            color: rgba(31, 26, 22, 0.7);
             font-size: 0.9rem;
             text-align: center;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease both;
+        }
+
+        .rise {
+            animation: rise 0.8s ease both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes rise {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 720px) {
@@ -307,7 +405,7 @@
                 padding: 28px;
             }
 
-            nav {
+            .nav-bar {
                 justify-content: center;
             }
         }
@@ -316,7 +414,7 @@
 
 <body>
     <div class="page">
-        <header class="hero">
+        <header class="hero fade-in">
             <div>
                 <p class="pill">Technical Consultant | PLM Software (Centric)</p>
                 <h1>Purna Sati Chandrala</h1>
@@ -338,9 +436,27 @@
                     <a class="button secondary" href="resume.pdf">Download Resume</a>
                 </div>
             </div>
+            <div class="hero-panel">
+                <div class="panel-card">
+                    <h3>Focus Areas</h3>
+                    <div class="stat-grid">
+                        <div class="stat">PLM configurations and integrations for fashion and retail.</div>
+                        <div class="stat">Workflow automation with BPMN and Camunda.</div>
+                        <div class="stat">Data pipelines and ML analysis for spatial data.</div>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <h3>Working Style</h3>
+                    <div class="stat-grid">
+                        <div class="stat">Detail-oriented with a consultative approach.</div>
+                        <div class="stat">Comfortable bridging product, data, and engineering.</div>
+                        <div class="stat">Fast learner with strong documentation habits.</div>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <nav>
+        <nav class="nav-bar fade-in">
             <a href="#about">About</a>
             <a href="#skills">Top Skills</a>
             <a href="#portfolio">Portfolio</a>
@@ -348,12 +464,13 @@
             <a href="#education">Education</a>
             <a href="#certifications">Certifications</a>
             <a href="#honors">Honors</a>
+            <a href="#recommendations">Recommendations</a>
             <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
         </nav>
 
         <main>
-            <section id="about">
+            <section id="about" class="rise">
                 <h2 class="section-title"><span></span>About</h2>
                 <div class="two-col">
                     <div class="card">
@@ -374,7 +491,7 @@
                 </div>
             </section>
 
-            <section id="skills">
+            <section id="skills" class="rise">
                 <h2 class="section-title"><span></span>Top Skills</h2>
                 <div class="grid">
                     <div class="card">
@@ -409,7 +526,7 @@
                 </div>
             </section>
 
-            <section id="portfolio">
+            <section id="portfolio" class="rise">
                 <h2 class="section-title"><span></span>Portfolio</h2>
                 <div class="grid">
                     <div class="card">
@@ -430,7 +547,7 @@
                 </div>
             </section>
 
-            <section id="work-experience">
+            <section id="work-experience" class="rise">
                 <h2 class="section-title"><span></span>Work Experience</h2>
                 <div class="timeline">
                     <div class="timeline-item">
@@ -468,7 +585,7 @@
                 </div>
             </section>
 
-            <section id="education">
+            <section id="education" class="rise">
                 <h2 class="section-title"><span></span>Education</h2>
                 <div class="grid">
                     <div class="card">
@@ -479,7 +596,7 @@
                 </div>
             </section>
 
-            <section id="certifications">
+            <section id="certifications" class="rise">
                 <h2 class="section-title"><span></span>Certifications</h2>
                 <div class="grid">
                     <div class="card">
@@ -492,7 +609,7 @@
                 </div>
             </section>
 
-            <section id="honors">
+            <section id="honors" class="rise">
                 <h2 class="section-title"><span></span>Honors and Awards</h2>
                 <div class="grid">
                     <div class="card">
@@ -501,7 +618,36 @@
                 </div>
             </section>
 
-            <section id="publications">
+            <section id="recommendations" class="rise">
+                <h2 class="section-title"><span></span>Recommendations</h2>
+                <div class="grid">
+                    <div class="card recommendation">
+                        <p>
+                            Purna is a hard-working individual that always takes the initiative and has a very candid
+                            attitude. In technical terms she grasps geospatial concepts quite well and was able to adapt
+                            to new concepts and technologies quite easily. She was also able to handle the tasks given
+                            to her with precision and care. I hope to work with her again in the future.
+                        </p>
+                        <strong>Joao Manuel - Web Engineer / Researcher and Founder</strong>
+                    </div>
+                    <div class="card recommendation">
+                        <p>
+                            Purna worked with us at the Secure Data Center for around 10 months, and very quickly became
+                            a valuable member of the team. During her time with us, Purna undertook a variety of
+                            different tasks, ranging from processing research applications, administrative tasks and
+                            writing guides for researchers. Purna has always been happy to take on new information and
+                            has approached all tasks with enthusiasm and professionalism. Her programming skills have
+                            also proved invaluable, both through her analysis as part of developing new policy, and
+                            through the support she provided for researchers. Purna is very personable and related well
+                            to everyone in the team. It was great to know that I could rely on her to provide support to
+                            our visiting researchers. We will miss her here but wish her every success for the future.
+                        </p>
+                        <strong>Deb Wiltshire - Secure Data Access Professional</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section id="publications" class="rise">
                 <h2 class="section-title"><span></span>Publications</h2>
                 <div class="grid">
                     <div class="card">
@@ -513,7 +659,7 @@
                 </div>
             </section>
 
-            <section id="contact">
+            <section id="contact" class="rise">
                 <h2 class="section-title"><span></span>Contact</h2>
                 <div class="two-col">
                     <div class="card contact-card">
