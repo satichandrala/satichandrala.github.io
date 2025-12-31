@@ -10,16 +10,19 @@
         @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap");
 
         :root {
-            --ink: #111827;
-            --paper: #f6f8fb;
-            --sand: #e9eef6;
-            --accent: #2563eb;
-            --accent-dark: #1d4ed8;
-            --accent-soft: rgba(37, 99, 235, 0.12);
-            --mint: #10b981;
-            --grid: rgba(15, 23, 42, 0.06);
-            --shadow: rgba(15, 23, 42, 0.12);
-            --glow: rgba(37, 99, 235, 0.18);
+            --ink: #e5e7eb;
+            --ink-soft: #cbd5f5;
+            --paper: #0b1120;
+            --panel: rgba(15, 23, 42, 0.85);
+            --panel-strong: rgba(15, 23, 42, 0.95);
+            --accent: #60a5fa;
+            --accent-dark: #3b82f6;
+            --accent-soft: rgba(96, 165, 250, 0.16);
+            --mint: #22d3ee;
+            --grid: rgba(148, 163, 184, 0.08);
+            --shadow: rgba(2, 6, 23, 0.6);
+            --glow: rgba(59, 130, 246, 0.24);
+            --border: rgba(148, 163, 184, 0.2);
         }
 
         * {
@@ -46,9 +49,9 @@
             background:
                 linear-gradient(90deg, var(--grid) 1px, transparent 1px),
                 linear-gradient(180deg, var(--grid) 1px, transparent 1px),
-                radial-gradient(900px 360px at 10% 0%, rgba(37, 99, 235, 0.14), transparent 60%),
-                radial-gradient(900px 360px at 100% 10%, rgba(16, 185, 129, 0.12), transparent 60%),
-                linear-gradient(160deg, #f6f8fb 0%, #e9eef6 100%);
+                radial-gradient(900px 360px at 10% 0%, rgba(96, 165, 250, 0.16), transparent 60%),
+                radial-gradient(900px 360px at 100% 10%, rgba(34, 211, 238, 0.12), transparent 60%),
+                linear-gradient(160deg, #0b1120 0%, #0f172a 100%);
             background-size: 44px 44px, 44px 44px, auto, auto, auto;
             min-height: 100vh;
             line-height: 1.6;
@@ -74,8 +77,8 @@
             gap: 28px;
             padding: 38px;
             border-radius: 20px;
-            background: rgba(255, 255, 255, 0.92);
-            border: 1px solid rgba(15, 23, 42, 0.12);
+            background: var(--panel-strong);
+            border: 1px solid var(--border);
             box-shadow: 0 24px 48px var(--shadow);
             position: relative;
             overflow: hidden;
@@ -117,7 +120,7 @@
             color: var(--accent);
             font-size: 0.85rem;
             font-weight: 600;
-            border: 1px solid rgba(37, 99, 235, 0.28);
+            border: 1px solid rgba(96, 165, 250, 0.35);
         }
 
         .hero-actions {
@@ -134,7 +137,7 @@
             padding: 12px 18px;
             border-radius: 10px;
             background: var(--accent);
-            color: #ffffff;
+            color: #0b1120;
             text-decoration: none;
             font-weight: 600;
             letter-spacing: 0.02em;
@@ -147,7 +150,7 @@
         .button.secondary {
             background: transparent;
             color: var(--accent);
-            border: 1px solid rgba(37, 99, 235, 0.4);
+            border: 1px solid rgba(96, 165, 250, 0.4);
             box-shadow: none;
         }
 
@@ -161,11 +164,11 @@
         }
 
         .panel-card {
-            background: rgba(255, 255, 255, 0.95);
-            border: 1px solid rgba(15, 23, 42, 0.12);
+            background: var(--panel);
+            border: 1px solid var(--border);
             border-radius: 14px;
             padding: 18px;
-            box-shadow: 0 16px 30px rgba(20, 16, 12, 0.1);
+            box-shadow: 0 16px 30px rgba(2, 6, 23, 0.5);
         }
 
         .panel-card h3 {
@@ -182,8 +185,8 @@
         .stat {
             padding: 12px 14px;
             border-radius: 12px;
-            background: rgba(37, 99, 235, 0.08);
-            border: 1px solid rgba(37, 99, 235, 0.2);
+            background: rgba(96, 165, 250, 0.08);
+            border: 1px solid rgba(96, 165, 250, 0.2);
             font-size: 0.95rem;
         }
 
@@ -197,24 +200,24 @@
             margin: 24px 0 34px;
             padding: 10px;
             border-radius: 14px;
-            background: rgba(255, 255, 255, 0.92);
-            border: 1px solid rgba(15, 23, 42, 0.12);
-            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid var(--border);
+            box-shadow: 0 12px 24px rgba(2, 6, 23, 0.5);
             animation: fadeIn 0.8s ease both;
         }
 
         .nav-bar a {
             text-decoration: none;
             color: var(--ink);
-            background: rgba(255, 255, 255, 0.95);
-            border: 1px solid rgba(15, 23, 42, 0.12);
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--border);
             padding: 8px 16px;
             border-radius: 10px;
             transition: transform 0.2s ease, background 0.2s ease;
         }
 
         .nav-bar a:hover {
-            background: rgba(37, 99, 235, 0.1);
+            background: rgba(96, 165, 250, 0.18);
             transform: translateY(-2px);
         }
 
@@ -244,11 +247,11 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.96);
-            border: 1px solid rgba(15, 23, 42, 0.12);
+            background: var(--panel);
+            border: 1px solid var(--border);
             border-radius: 14px;
             padding: 22px;
-            box-shadow: 0 16px 34px var(--shadow);
+            box-shadow: 0 16px 34px rgba(2, 6, 23, 0.5);
         }
 
         .card h3 {
@@ -266,10 +269,10 @@
         .tag {
             padding: 6px 12px;
             border-radius: 10px;
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--accent-dark);
+            background: rgba(96, 165, 250, 0.12);
+            color: var(--accent);
             font-size: 0.85rem;
-            border: 1px solid rgba(37, 99, 235, 0.25);
+            border: 1px solid rgba(96, 165, 250, 0.28);
         }
 
         .timeline {
@@ -279,11 +282,11 @@
         }
 
         .timeline-item {
-            background: rgba(255, 255, 255, 0.96);
+            background: var(--panel);
             border-radius: 14px;
             padding: 18px 20px;
-            border: 1px solid rgba(15, 23, 42, 0.12);
-            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+            border: 1px solid var(--border);
+            box-shadow: 0 12px 24px rgba(2, 6, 23, 0.45);
         }
 
         .timeline-item h3 {
@@ -309,7 +312,7 @@
         .recommendation strong {
             display: block;
             margin-top: 10px;
-            color: var(--slate);
+            color: var(--ink-soft);
         }
 
         .contact-card a {
@@ -333,7 +336,7 @@
         .contact-form label {
             font-size: 0.9rem;
             font-weight: 600;
-            color: var(--slate);
+            color: var(--ink-soft);
         }
 
         .contact-form input,
@@ -341,10 +344,11 @@
             width: 100%;
             padding: 12px 14px;
             border-radius: 10px;
-            border: 1px solid rgba(15, 23, 42, 0.14);
-            background: #ffffff;
+            border: 1px solid var(--border);
+            background: rgba(15, 23, 42, 0.6);
             font-family: inherit;
             font-size: 0.95rem;
+            color: var(--ink);
         }
 
         .contact-form textarea {
@@ -355,8 +359,8 @@
         footer {
             margin-top: 60px;
             padding: 24px 0 0;
-            border-top: 1px solid rgba(15, 23, 42, 0.12);
-            color: rgba(15, 23, 42, 0.7);
+            border-top: 1px solid var(--border);
+            color: rgba(226, 232, 240, 0.7);
             font-size: 0.9rem;
             text-align: center;
         }
