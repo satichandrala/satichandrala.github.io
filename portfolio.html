@@ -248,6 +248,7 @@
             0% {
                 opacity: 0;
             }
+
             100% {
                 opacity: 1;
             }
@@ -279,103 +280,171 @@
     <header>
         <h1>Purna Sati Chandrala's Portfolio</h1>
     </header>
-
     <!-- Navigation -->
     <nav>
         <a href="#about">About</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#work-experience">Work Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#honors">Honors</a>
+        <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <!-- Main Content -->
     <main>
         <!-- About Section -->
-        <section id="about" class="animated-section" onclick="document.getElementById('about-content').scrollIntoView({ behavior: 'smooth' });">
+        <section id="about" class="animated-section"
+            onclick="document.getElementById('about-content').scrollIntoView({ behavior: 'smooth' });">
             <h2>About Me</h2>
         </section>
         <div id="about-content" class="sticky-note">
             <h3>About Me</h3>
-            <p>I'm Purna Sati Chandrala, a passionate data scientist and geospatial expert based in Bonn, Germany. I hold a Master's degree in Geoinformation and Spatial Development from the University of Bonn.</p>
-            <p>With a background in Civil Engineering and extensive experience in machine learning, GIS, and data management, I bring a unique blend of skills to the table. My journey in the field started with a Bachelor's in Civil Engineering from JNTU Kakinada, India.</p>
-            <p>Throughout my academic and professional career, I have excelled in various roles, including Data Scientist at the University of Jena, Spatial Data Analyst at GESIS - Leibniz-Institut für Sozialwissenschaften, and Graduate Research Assistant at Ruhr-Universität Bochum. My work involves utilizing technologies such as OpenCV, Python, GIS libraries (ArcGIS, QGIS, GDAL), and machine learning frameworks (TensorFlow, Keras, PyTorch).</p>
+            <p>Technical Consultant | PLM Software (Centric) | Fashion and Retail | Germany</p>
+            <p>Hi, my name is Purna. I am a Technical Consultant at Momentum42 in Germany. I graduated with a Master of
+                Science in Engineering and focus on data-driven decision-making that helps businesses grow.</p>
+            <p>I work in the PLM industry as a Technical Consultant, configuring systems with XML, JavaScript, and
+                MSSQL, plus workflows using BPMN and Camunda. I have also contributed to research and startups,
+                including GeoInsight, where I automated satellite image downloads and applied machine learning for
+                anomaly detection and dimensionality reduction.</p>
+            <p>My master's thesis used decision tree methods to classify historical forest management maps with over
+                95% accuracy. In my free time, I enjoy experimenting with new cuisines and writing on Quora.</p>
         </div>
 
         <!-- Skills Section -->
-        <section id="skills" class="animated-section" onclick="document.getElementById('skills-content').scrollIntoView({ behavior: 'smooth' });">
-            <h2>Skills</h2>
+        <section id="skills" class="animated-section"
+            onclick="document.getElementById('skills-content').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Top Skills</h2>
         </section>
         <div id="skills-content" class="skills">
             <div class="skill">
-                <span class="skill-name">Python</span>
+                <span class="skill-name">PLM Software</span>
                 <div class="skill-bar">
                     <div class="skill-bar-level" style="width: 90%;"></div>
                 </div>
             </div>
             <div class="skill">
-                <span class="skill-name">Machine Learning</span>
-                <div class="skill-bar">
-                    <div class="skill-bar-level" style="width: 85%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span class="skill-name">GIS & Geospatial Analysis</span>
+                <span class="skill-name">PowerShell</span>
                 <div class="skill-bar">
                     <div class="skill-bar-level" style="width: 80%;"></div>
                 </div>
             </div>
             <div class="skill">
-                <span class="skill-name">Data Visualization</span>
+                <span class="skill-name">REST API</span>
                 <div class="skill-bar">
                     <div class="skill-bar-level" style="width: 75%;"></div>
                 </div>
             </div>
         </div>
+        <div class="sticky-note">
+            <h3>Languages</h3>
+            <p>English (Native or Bilingual)</p>
+            <p>German (Limited Working)</p>
+            <p>Hindi (Limited Working)</p>
+        </div>
 
         <!-- Portfolio Section -->
-        <section id="portfolio" class="animated-section" onclick="document.getElementById('portfolio-content').scrollIntoView({ behavior: 'smooth' });">
+        <section id="portfolio" class="animated-section"
+            onclick="document.getElementById('portfolio-content').scrollIntoView({ behavior: 'smooth' });">
             <h2>My Portfolio</h2>
         </section>
         <div id="portfolio-content" class="sticky-note">
-            <h3>Using Machine Learning and Artificial Neural Networks for Analysis of Cologne Residential Land Market</h3>
+            <h3>Using Machine Learning and Artificial Neural Networks for Analysis of Cologne Residential Land Market
+            </h3>
             <p>Master Project, MSc GIS and Spatial Development</p>
             <p>April 2020 - April 2021</p>
-            <p>Made predictive data analysis using regression analysis and artificial neural networks. Improved the accuracy of model prediction from 48% to 63%.</p>
+            <p>Made predictive data analysis using regression analysis and artificial neural networks. Improved the
+                accuracy of model prediction from 48% to 63%.</p>
             <h3>Visualization of Travel Time Maps of Bonn</h3>
             <p>Location-Based Services, MSc GIS and Spatial Development</p>
             <p>April 2020 - Aug 2020</p>
-            <p>Developed an Android Application for travel time maps in Bonn. Analyzed the streets of Bonn using ArcGIS.</p>
+            <p>Developed an Android Application for travel time maps in Bonn. Analyzed the streets of Bonn using ArcGIS.
+            </p>
             <h3>Developing a Geoinformation System for Interdisciplinary Research Data Management</h3>
             <p>Data Management for Interdisciplinary Research, MSc GIS and Spatial Development</p>
             <p>September 2020 - February 2021</p>
-            <p>Provided solution for Research Data Management using GIS, RDF Database, and SQL. Developed an ontology for metadata and wrote SPARQL queries.</p>
-        </div>
-
-        <!-- Work Experience Section -->
-        <section id="work-experience" class="animated-section" onclick="document.getElementById('work-experience-content').scrollIntoView({ behavior: 'smooth' });">
+            <p>Provided solution for Research Data Management using GIS, RDF Database, and SQL. Developed an ontology
+                for metadata and wrote SPARQL queries.</p>
+        </div>        <!-- Work Experience Section -->
+        <section id="work-experience" class="animated-section"
+            onclick="document.getElementById('work-experience-content').scrollIntoView({ behavior: 'smooth' });">
             <h2>Work Experience</h2>
         </section>
         <div id="work-experience-content" class="sticky-note">
-            <h3>Data Scientist - University of Jena</h3>
-            <p>Jan 2023 - June 2023</p>
-            <p>Utilized OpenCV and Python for map restoration, enabling image segmentation tasks. Conducted a study on image stitching algorithms, enhancing map repair processes.</p>
-            <h3>Spatial Data Analyst - GESIS - Leibniz-Institut für Sozialwissenschaften</h3>
-            <p>May 2021 - Current Job</p>
-            <p>Digitized and classified scanned land use maps of 1940s. Georeferenced old maps using QGIS and prepared training manuals. Communicated with researchers from over 10 different countries about data usage agreements.</p>
-            <h3>Graduate Research Assistant - Ruhr-Universität Bochum</h3>
+            <h3>Momentum42 - Technical Consultant</h3>
+            <p>2024 - Present</p>
+            <h3>AI Guild - Member</h3>
+            <p>May 2024 - Present</p>
+            <p>Munich, Bavaria, Germany</p>
+            <h3>Friedrich Schiller University Jena - Machine Learning Researcher</h3>
+            <p>Jan 2023 - Jun 2023</p>
+            <p>Jena, Thuringia, Germany</p>
+            <h3>GESIS - Leibniz-Institut fuer Sozialwissenschaften - Data Scientist / Consultant</h3>
+            <p>May 2021 - Jun 2023</p>
+            <p>Cologne, North Rhine-Westphalia, Germany</p>
+            <h3>GeoInsight - Data Scientist / Consultant</h3>
             <p>Jan 2022 - Nov 2022</p>
-            <p>Developed data pipelines to download Sentinel-1 and 2 satellite data into the data lake using Python. Created UI designs for the company’s website and performed data analysis to create visualizations.</p>
+            <p>Bochum, North Rhine-Westphalia, Germany</p>
+            <h3>ROOT2AI Technology Private Limited - NLP Data Scientist (Fintech Chatbot)</h3>
+            <p>Apr 2021 - Jun 2021</p>
+            <p>Remote</p>
+            <h3>Amazon - Machine Learning Data Associate (NLP) - Alexa</h3>
+            <p>Jul 2017 - Sep 2019</p>
+            <p>Hyderabad Area, India</p>
+            <h3>Brick Manufacturing - Business Engineer (Construction, Sales, Marketing)</h3>
+            <p>Jun 2016 - Jun 2017</p>
+            <p>India</p>
+        </div>
+
+        <section id="education" class="animated-section"
+            onclick="document.getElementById('education-content').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Education</h2>
+        </section>
+        <div id="education-content" class="sticky-note">
+            <h3>The University of Bonn</h3>
+            <p>Master of Science (MS), Engineering</p>
+            <p>Sep 2019 - Dec 2023</p>
+        </div>
+
+        <section id="certifications" class="animated-section"
+            onclick="document.getElementById('certifications-content').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Certifications</h2>
+        </section>
+        <div id="certifications-content" class="sticky-note">
+            <p>Explore a Career in Product Management</p>
+            <p>Becoming a Product Manager: A Complete Guide</p>
+            <p>Scrum: The Basics</p>
+            <p>Agile Foundations</p>
+            <p>Product Management: Launching Your Product</p>
+        </div>
+
+        <section id="honors" class="animated-section"
+            onclick="document.getElementById('honors-content').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Honors & Awards</h2>
+        </section>
+        <div id="honors-content" class="sticky-note">
+            <p>Best Project from Department of Civil Engineering</p>
+        </div>
+
+        <section id="publications" class="animated-section"
+            onclick="document.getElementById('publications-content').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Publications</h2>
+        </section>
+        <div id="publications-content" class="sticky-note">
+            <p>Issues on urban planning and governance in India: Temporary utilization of public spaces for religious
+                events</p>
         </div>
 
         <!-- Contact Section -->
-        <section id="contact" class="animated-section" onclick="document.getElementById('contact-content').scrollIntoView({ behavior: 'smooth' });">
+        <section id="contact" class="animated-section"
+            onclick="document.getElementById('contact-content').scrollIntoView({ behavior: 'smooth' });">
             <h2>Contact Me</h2>
-        </section>
-        <div id="contact-content" class="sticky-note">
+        </section>        <div id="contact-content" class="sticky-note">
             <h3>Contact Me</h3>
-            <a href="mailto:purnasatichandrala@gmail.com" class="contact-link">Email: purnasatichandrala@aol.com</a>
-            <a href="https://www.linkedin.com/in/purnasatichandrala" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
-            <a href="https://www.github.com/satichandrala" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+            <a href="mailto:satichandrala@gmail.com" class="contact-link">Email: satichandrala@gmail.com</a>
+            <a href="https://www.linkedin.com/in/purnasch" target="_blank" rel="noopener noreferrer"
+                class="contact-link">LinkedIn: www.linkedin.com/in/purnasch</a>
         </div>
     </main>
 
@@ -414,3 +483,10 @@
     <footer>
         <p>&copy; 2024 Purna Sati Chandrala. All rights reserved.</p>
     </footer>
+
+
+
+
+
+
+
