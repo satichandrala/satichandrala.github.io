@@ -7,501 +7,548 @@
     <title>Purna Sati Chandrala's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Sora:wght@300;400;500;600&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap");
 
         :root {
-            --ink: #2d2520;
-            --paper: #f9f4ed;
-            --sand: #f2e6d8;
-            --copper: #b86b43;
-            --clay: #8d5b44;
-            --accent: #2f6f66;
-            --shadow: rgba(30, 22, 18, 0.12);
+            --ink: #221c18;
+            --paper: #fbf7f2;
+            --mist: #f4ede4;
+            --copper: #b35a3c;
+            --forest: #1f5d53;
+            --olive: #7a6b4b;
+            --shadow: rgba(20, 16, 12, 0.12);
+            --glow: rgba(179, 90, 60, 0.18);
         }
 
-        /* Reset & Global Styles */
+        * {
+            box-sizing: border-box;
+        }
+
         body,
         h1,
         h2,
+        h3,
         p,
         a {
             margin: 0;
             padding: 0;
-            font-family: "Sora", "Segoe UI", sans-serif;
+            font-family: "Space Grotesk", "Segoe UI", sans-serif;
         }
 
         body {
-            margin: 0;
             color: var(--ink);
-            line-height: 1.7;
-            font-size: 16px;
-            overflow: hidden;
             background:
-                radial-gradient(900px 480px at 12% 0%, rgba(184, 107, 67, 0.18), transparent 60%),
-                radial-gradient(800px 480px at 110% 10%, rgba(47, 111, 102, 0.18), transparent 60%),
-                linear-gradient(180deg, #fbf7f0 0%, #f2e6d8 100%);
+                radial-gradient(600px 300px at 10% 0%, rgba(179, 90, 60, 0.18), transparent 60%),
+                radial-gradient(700px 360px at 100% 12%, rgba(31, 93, 83, 0.2), transparent 60%),
+                linear-gradient(160deg, #fbf7f2 0%, #efe4d6 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
         h1,
-        h2 {
-            color: var(--ink);
+        h2,
+        h3 {
             font-family: "Fraunces", "Times New Roman", serif;
             letter-spacing: 0.02em;
         }
 
-        /* Opening Screen */
-        #openingScreen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 3;
+        .page {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 36px 20px 80px;
         }
 
-        #openingScreenContent {
+        .hero {
+            display: grid;
+            gap: 28px;
+            padding: 36px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid rgba(34, 28, 24, 0.1);
+            box-shadow: 0 28px 60px var(--shadow);
             position: relative;
-            text-align: center;
-            color: #ffffff;
-            z-index: 4;
+            overflow: hidden;
         }
 
-        #openingScreenContent h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        #openingScreenContent button {
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            color: #ffffff;
-            background-color: var(--accent);
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        #openingScreenContent button:hover {
-            background-color: #3a8077;
-        }
-
-        /* Video Background */
-        #networkVideo {
+        .hero::after {
+            content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            z-index: 1;
-            opacity: 0.8;
-        }
-
-        /* Header */
-        header {
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 2;
-            display: none;
-        }
-
-        header h1 {
-            background: linear-gradient(120deg, #efe2d2, #fbf7f0);
-            padding: 18px 22px;
-            border-radius: 18px;
-            box-shadow: 0 16px 30px var(--shadow);
-        }
-
-        /* Navigation */
-        nav {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            position: relative;
-            z-index: 2;
-            display: none;
-        }
-
-        nav a {
-            margin: 0 1rem;
-            text-decoration: none;
-            color: var(--ink);
-            padding: 10px 20px;
+            top: -80px;
+            right: -80px;
+            width: 200px;
+            height: 200px;
+            background: var(--glow);
             border-radius: 999px;
-            transition: background-color 0.3s, color 0.3s, transform 0.3s;
-            background: rgba(255, 255, 255, 0.6);
-            border: 1px solid rgba(45, 37, 32, 0.12);
+            filter: blur(2px);
         }
 
-        nav a:hover {
-            background-color: #f3e1cf;
-            color: var(--ink);
+        .hero h1 {
+            font-size: clamp(2.4rem, 3.8vw, 3.8rem);
+        }
+
+        .hero p {
+            max-width: 620px;
+            font-size: 1.05rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pill {
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(31, 93, 83, 0.1);
+            color: var(--forest);
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(31, 93, 83, 0.2);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            background: var(--forest);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            border: none;
+            box-shadow: 0 14px 24px rgba(31, 93, 83, 0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: var(--forest);
+            border: 1px solid rgba(31, 93, 83, 0.3);
+            box-shadow: none;
+        }
+
+        .button:hover {
             transform: translateY(-2px);
         }
 
-        /* Main Content */
-        main {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            display: none;
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 24px 0 32px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--ink);
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(34, 28, 24, 0.1);
+            padding: 8px 16px;
+            border-radius: 999px;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        nav a:hover {
+            background: #fff0e3;
+            transform: translateY(-2px);
         }
 
         section {
-            margin-bottom: 2rem;
-            padding: 2.25rem;
-            border-radius: 1.25rem;
-            background: rgba(255, 255, 255, 0.7);
-            box-shadow: 0 18px 30px var(--shadow);
-            cursor: pointer;
-            transition: transform 0.3s;
-            border: 1px solid rgba(45, 37, 32, 0.08);
+            margin-top: 40px;
         }
 
-        section:hover {
-            transform: translateY(-10px) scale(1.02);
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
         }
 
-        /* Sticky Note Style Cards */
-        .sticky-note {
-            background: rgba(255, 255, 255, 0.84);
-            border: 1px solid rgba(184, 107, 67, 0.2);
+        .section-title span {
+            width: 40px;
+            height: 2px;
+            background: var(--copper);
+            border-radius: 999px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            margin-top: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.86);
+            border: 1px solid rgba(34, 28, 24, 0.1);
             border-radius: 22px;
-            padding: 26px;
-            margin-bottom: 24px;
-            box-shadow: 0 20px 40px rgba(30, 22, 18, 0.08);
-            text-align: left;
-            transition: transform 0.3s;
+            padding: 22px;
+            box-shadow: 0 18px 40px var(--shadow);
         }
 
-        .sticky-note:hover {
-            transform: rotate(-1deg) translateY(-10px);
-        }
-
-        .sticky-note h3 {
+        .card h3 {
             color: var(--copper);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
-        .sticky-note p {
-            margin-bottom: 10px;
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
         }
 
-        /* Skill Bars */
-        .skills {
-            max-width: 600px;
-            margin: 0 auto 2rem;
+        .tag {
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(179, 90, 60, 0.1);
+            color: var(--copper);
+            font-size: 0.85rem;
+            border: 1px solid rgba(179, 90, 60, 0.25);
         }
 
-        .skill {
-            margin-bottom: 1rem;
-            text-align: left;
+        .timeline {
+            display: grid;
+            gap: 16px;
+            margin-top: 20px;
         }
 
-        .skill-name {
-            font-weight: bold;
-            color: var(--ink);
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 18px;
+            padding: 18px 20px;
+            border: 1px solid rgba(34, 28, 24, 0.1);
+            box-shadow: 0 12px 24px rgba(20, 16, 12, 0.08);
         }
 
-        .skill-bar {
-            background-color: var(--sand);
-            border-radius: 10px;
-            overflow: hidden;
-            margin-top: 5px;
+        .timeline-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
         }
 
-        .skill-bar-level {
-            height: 20px;
-            background: linear-gradient(90deg, var(--copper), var(--accent));
-            transition: width 1s ease-in-out;
+        .timeline-item p {
+            margin-bottom: 6px;
         }
 
-        /* Contact Links */
-        .contact-link {
-            display: block;
-            margin-top: 0.5rem;
-            color: var(--accent);
+        .two-col {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            margin-top: 20px;
+        }
+
+        .contact-card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--forest);
             text-decoration: none;
-            transition: color 0.3s;
+            margin-bottom: 10px;
         }
 
-        .contact-link:hover {
-            color: #3a8077;
+        .contact-card a:hover {
+            color: #2c7a6f;
         }
 
-        /* Scroll to Top Button */
-        #scrollToTop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 18px;
+        .contact-form {
+            display: grid;
+            gap: 12px;
+        }
+
+        .contact-form label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--olive);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 14px;
+            border: 1px solid rgba(34, 28, 24, 0.14);
+            background: #ffffff;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .contact-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            justify-self: start;
             cursor: pointer;
-            border-radius: 12px;
-            box-shadow: 0 10px 18px rgba(30, 22, 18, 0.2);
         }
 
-        #scrollToTop:hover {
-            background-color: #3a8077;
-        }
-
-        /* Footer */
         footer {
+            margin-top: 60px;
+            padding: 24px 0 0;
+            border-top: 1px solid rgba(34, 28, 24, 0.12);
+            color: rgba(34, 28, 24, 0.7);
+            font-size: 0.9rem;
             text-align: center;
-            padding: 1.5rem;
-            font-size: 14px;
-            color: var(--ink);
-            background-color: var(--paper);
-            border-top: 1px solid rgba(45, 37, 32, 0.12);
-            display: none;
         }
 
-        /* Dynamic Content Animation */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
+        @media (max-width: 720px) {
+            .hero {
+                padding: 28px;
             }
 
-            100% {
-                opacity: 1;
+            nav {
+                justify-content: center;
             }
-        }
-
-        .animated-section {
-            animation: fadeIn 1.5s ease-in-out;
         }
     </style>
 </head>
 
 <body>
-    <!-- Video Background -->
-    <video id="networkVideo" autoplay loop muted>
-        <source src="103102383.webm" type="video/webm">
-        Your browser does not support the video tag.
-    </video>
+    <div class="page">
+        <header class="hero">
+            <div>
+                <p class="pill">Technical Consultant | PLM Software (Centric)</p>
+                <h1>Purna Sati Chandrala</h1>
+                <p>
+                    Technical Consultant at Momentum42 in Germany, focused on PLM systems, workflow automation, and
+                    data-driven delivery for fashion and retail. Background in ML research and geospatial data
+                    pipelines, with experience across startups, research, and industry.
+                </p>
+                <div class="hero-meta">
+                    <span class="pill">Germany</span>
+                    <span class="pill">PLM Software</span>
+                    <span class="pill">REST API</span>
+                    <span class="pill">PowerShell</span>
+                </div>
+                <div class="hero-actions">
+                    <a class="button" href="mailto:satichandrala@gmail.com">Email</a>
+                    <a class="button secondary" href="https://www.linkedin.com/in/purnasch" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                    <a class="button secondary" href="resume.pdf">Download Resume</a>
+                </div>
+            </div>
+        </header>
 
-    <!-- Opening Screen -->
-    <div id="openingScreen">
-        <div id="openingScreenContent">
-            <h1>Welcome to My Website</h1>
-            <p>Purna Sati Chandrala's Portfolio</p>
-            <button onclick="enterSite()">Enter</button>
-        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Top Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#work-experience">Work Experience</a>
+            <a href="#education">Education</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#honors">Honors</a>
+            <a href="#publications">Publications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <main>
+            <section id="about">
+                <h2 class="section-title"><span></span>About</h2>
+                <div class="two-col">
+                    <div class="card">
+                        <h3>Summary</h3>
+                        <p>
+                            I work in the PLM industry as a Technical Consultant, configuring systems with XML,
+                            JavaScript, and MSSQL, plus workflows using BPMN and Camunda. I have contributed to research
+                            and startups, including GeoInsight, where I automated satellite image downloads and applied
+                            ML for anomaly detection and dimensionality reduction.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Highlights</h3>
+                        <p>Decision tree thesis for historical forest map classification with over 95% accuracy.</p>
+                        <p>Automated satellite data pipelines across three sources.</p>
+                        <p>PLM automation for uploads, exports, and workflow orchestration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2 class="section-title"><span></span>Top Skills</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Core</h3>
+                        <div class="tag-row">
+                            <span class="tag">PLM Software</span>
+                            <span class="tag">PowerShell</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">XML</span>
+                            <span class="tag">MSSQL</span>
+                            <span class="tag">BPMN</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Languages</h3>
+                        <p>English (Native or Bilingual)</p>
+                        <p>German (Limited Working)</p>
+                        <p>Hindi (Limited Working)</p>
+                    </div>
+                    <div class="card">
+                        <h3>Tools</h3>
+                        <div class="tag-row">
+                            <span class="tag">Camunda</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">R</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">QGIS</span>
+                            <span class="tag">ArcGIS</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio">
+                <h2 class="section-title"><span></span>Portfolio</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>PLM Automation and Workflow Enablement</h3>
+                        <p>Centric PLM | Fashion and Retail</p>
+                        <p>Configured XML, JavaScript, MSSQL integrations, and BPMN workflows in Camunda.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Digital Twin and Satellite Data Pipelines</h3>
+                        <p>GeoInsight</p>
+                        <p>Automated downloads from three satellite sources and applied ML methods for anomalies.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Forest Map Classification</h3>
+                        <p>Master's Thesis | University of Bonn</p>
+                        <p>Decision tree models achieved over 95% accuracy on historical forest maps.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="work-experience">
+                <h2 class="section-title"><span></span>Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Momentum42 - Technical Consultant</h3>
+                        <p>2024 - Present</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>AI Guild - Member</h3>
+                        <p>May 2024 - Present | Munich, Germany</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Friedrich Schiller University Jena - Machine Learning Researcher</h3>
+                        <p>Jan 2023 - Jun 2023 | Jena, Germany</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>GESIS - Leibniz-Institut fuer Sozialwissenschaften - Data Scientist / Consultant</h3>
+                        <p>May 2021 - Jun 2023 | Cologne, Germany</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>GeoInsight - Data Scientist / Consultant</h3>
+                        <p>Jan 2022 - Nov 2022 | Bochum, Germany</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>ROOT2AI Technology Private Limited - NLP Data Scientist (Fintech Chatbot)</h3>
+                        <p>Apr 2021 - Jun 2021 | Remote</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Amazon - Machine Learning Data Associate (NLP) - Alexa</h3>
+                        <p>Jul 2017 - Sep 2019 | Hyderabad, India</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Brick Manufacturing - Business Engineer</h3>
+                        <p>Jun 2016 - Jun 2017 | India</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2 class="section-title"><span></span>Education</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>The University of Bonn</h3>
+                        <p>Master of Science (MS), Engineering</p>
+                        <p>Sep 2019 - Dec 2023</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certifications">
+                <h2 class="section-title"><span></span>Certifications</h2>
+                <div class="grid">
+                    <div class="card">
+                        <p>Explore a Career in Product Management</p>
+                        <p>Becoming a Product Manager: A Complete Guide</p>
+                        <p>Scrum: The Basics</p>
+                        <p>Agile Foundations</p>
+                        <p>Product Management: Launching Your Product</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="honors">
+                <h2 class="section-title"><span></span>Honors and Awards</h2>
+                <div class="grid">
+                    <div class="card">
+                        <p>Best Project from Department of Civil Engineering</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="publications">
+                <h2 class="section-title"><span></span>Publications</h2>
+                <div class="grid">
+                    <div class="card">
+                        <p>
+                            Issues on urban planning and governance in India: Temporary utilization of public spaces
+                            for religious events
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2 class="section-title"><span></span>Contact</h2>
+                <div class="two-col">
+                    <div class="card contact-card">
+                        <a href="mailto:satichandrala@gmail.com">satichandrala@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/purnasch" target="_blank"
+                            rel="noopener noreferrer">www.linkedin.com/in/purnasch</a>
+                        <a href="resume.pdf">Download resume (PDF)</a>
+                    </div>
+                    <div class="card">
+                        <form class="contact-form" action="https://formspree.io/f/mwvkgepk" method="POST">
+                            <input type="hidden" name="_subject" value="Portfolio contact request" />
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+                            <div>
+                                <label for="contact-name">Name</label>
+                                <input id="contact-name" name="name" type="text" required />
+                            </div>
+                            <div>
+                                <label for="contact-email">Email</label>
+                                <input id="contact-email" name="email" type="email" required />
+                            </div>
+                            <div>
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" name="message" required></textarea>
+                            </div>
+                            <button class="button" type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Purna Sati Chandrala. All rights reserved.</p>
+        </footer>
     </div>
+</body>
 
-    <!-- Header -->
-    <header>
-        <h1>Purna Sati Chandrala's Portfolio</h1>
-    </header>
-    <!-- Navigation -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Top Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#work-experience">Work Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#honors">Honors</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section id="about" class="animated-section"
-            onclick="document.getElementById('about-content').scrollIntoView({ behavior: 'smooth' });">
-            <h2>About Me</h2>
-        </section>
-        <div id="about-content" class="sticky-note">
-            <h3>About Me</h3>
-            <p>Technical Consultant | PLM Software (Centric) | Fashion and Retail | Germany</p>
-            <p>Hi, my name is Purna. I am a Technical Consultant at Momentum42 in Germany. I graduated with a Master of
-                Science in Engineering and focus on data-driven decision-making that helps businesses grow.</p>
-            <p>I work in the PLM industry as a Technical Consultant, configuring systems with XML, JavaScript, and
-                MSSQL, plus workflows using BPMN and Camunda. I have also contributed to research and startups,
-                including GeoInsight, where I automated satellite image downloads and applied machine learning for
-                anomaly detection and dimensionality reduction.</p>
-            <p>My master's thesis used decision tree methods to classify historical forest management maps with over
-                95% accuracy. In my free time, I enjoy experimenting with new cuisines and writing on Quora.</p>
-        </div>
-
-        <!-- Skills Section -->
-        <section id="skills" class="animated-section"
-            onclick="document.getElementById('skills-content').scrollIntoView({ behavior: 'smooth' });">
-            <h2>Top Skills</h2>
-        </section>
-        <div id="skills-content" class="skills">
-            <div class="skill">
-                <span class="skill-name">PLM Software</span>
-                <div class="skill-bar">
-                    <div class="skill-bar-level" style="width: 90%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span class="skill-name">PowerShell</span>
-                <div class="skill-bar">
-                    <div class="skill-bar-level" style="width: 80%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span class="skill-name">REST API</span>
-                <div class="skill-bar">
-                    <div class="skill-bar-level" style="width: 75%;"></div>
-                </div>
-            </div>
-        </div>
-        <div class="sticky-note">
-            <h3>Languages</h3>
-            <p>English (Native or Bilingual)</p>
-            <p>German (Limited Working)</p>
-            <p>Hindi (Limited Working)</p>
-        </div>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="animated-section"
-            onclick="document.getElementById('portfolio-content').scrollIntoView({ behavior: 'smooth' });">
-            <h2>My Portfolio</h2>
-        </section>
-        <div id="portfolio-content" class="sticky-note">
-            <h3>PLM Automation and Workflow Enablement</h3>
-            <p>Centric PLM | Fashion and Retail</p>
-            <p>Configured XML, JavaScript, MSSQL integrations, and BPMN workflows in Camunda to support data automation,
-                uploads, and exports.</p>
-            <h3>Digital Twin and Satellite Data Pipelines</h3>
-            <p>GeoInsight</p>
-            <p>Automated downloads from three satellite sources and applied ML methods for anomaly detection and
-                dimensionality reduction.</p>
-            <h3>Forest Map Classification with Decision Trees</h3>
-            <p>Master's Thesis | University of Bonn</p>
-            <p>Digitized historical forest management maps with decision tree models, achieving over 95% accuracy.</p>
-        </div>
-
-        <!-- Work Experience Section -->
-        <section id="work-experience" class="animated-section"
-            onclick="document.getElementById('work-experience-content').scrollIntoView({ behavior: 'smooth' });">
-            <h2>Work Experience</h2>
-        </section>
-        <div id="work-experience-content" class="sticky-note">
-            <h3>Momentum42 - Technical Consultant</h3>
-            <p>2024 - Present</p>
-            <h3>AI Guild - Member</h3>
-            <p>May 2024 - Present</p>
-            <p>Munich, Bavaria, Germany</p>
-            <h3>Friedrich Schiller University Jena - Machine Learning Researcher</h3>
-            <p>Jan 2023 - Jun 2023</p>
-            <p>Jena, Thuringia, Germany</p>
-            <h3>GESIS - Leibniz-Institut fuer Sozialwissenschaften - Data Scientist / Consultant</h3>
-            <p>May 2021 - Jun 2023</p>
-            <p>Cologne, North Rhine-Westphalia, Germany</p>
-            <h3>GeoInsight - Data Scientist / Consultant</h3>
-            <p>Jan 2022 - Nov 2022</p>
-            <p>Bochum, North Rhine-Westphalia, Germany</p>
-            <h3>ROOT2AI Technology Private Limited - NLP Data Scientist (Fintech Chatbot)</h3>
-            <p>Apr 2021 - Jun 2021</p>
-            <p>Remote</p>
-            <h3>Amazon - Machine Learning Data Associate (NLP) - Alexa</h3>
-            <p>Jul 2017 - Sep 2019</p>
-            <p>Hyderabad Area, India</p>
-            <h3>Brick Manufacturing - Business Engineer (Construction, Sales, Marketing)</h3>
-            <p>Jun 2016 - Jun 2017</p>
-            <p>India</p>
-        </div>
-
-        <section id="education" class="animated-section"
-            onclick="document.getElementById('education-content').scrollIntoView({ behavior: 'smooth' });">
-            <h2>Education</h2>
-        </section>
-        <div id="education-content" class="sticky-note">
-            <h3>The University of Bonn</h3>
-            <p>Master of Science (MS), Engineering</p>
-            <p>Sep 2019 - Dec 2023</p>
-        </div>
-
-        <section id="certifications" class="animated-section"
-            onclick="document.getElementById('certifications-content').scrollIntoView({ behavior: 'smooth' });">
-            <h2>Certifications</h2>
-        </section>
-        <div id="certifications-content" class="sticky-note">
-            <p>Explore a Career in Product Management</p>
-            <p>Becoming a Product Manager: A Complete Guide</p>
-            <p>Scrum: The Basics</p>
-            <p>Agile Foundations</p>
-            <p>Product Management: Launching Your Product</p>
-        </div>
-
-        <section id="honors" class="animated-section"
-            onclick="document.getElementById('honors-content').scrollIntoView({ behavior: 'smooth' });">
-            <h2>Honors & Awards</h2>
-        </section>
-        <div id="honors-content" class="sticky-note">
-            <p>Best Project from Department of Civil Engineering</p>
-        </div>
-
-        <section id="publications" class="animated-section"
-            onclick="document.getElementById('publications-content').scrollIntoView({ behavior: 'smooth' });">
-            <h2>Publications</h2>
-        </section>
-        <div id="publications-content" class="sticky-note">
-            <p>Issues on urban planning and governance in India: Temporary utilization of public spaces for religious
-                events</p>
-        </div>
-
-        <!-- Contact Section -->
-        <section id="contact" class="animated-section"
-            onclick="document.getElementById('contact-content').scrollIntoView({ behavior: 'smooth' });">
-            <h2>Contact Me</h2>
-        </section>
-        <div id="contact-content" class="sticky-note">
-            <h3>Contact Me</h3>
-            <a href="mailto:satichandrala@gmail.com" class="contact-link">Email: satichandrala@gmail.com</a>
-            <a href="https://www.linkedin.com/in/purnasch" target="_blank" rel="noopener noreferrer"
-                class="contact-link">LinkedIn: www.linkedin.com/in/purnasch</a>
-            <a href="resume.pdf" class="contact-link">Download Resume (PDF)</a>
-        </div>
-    </main>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop">Scroll to Top</button>
-
-    <!-- Interactivity Scripts -->
-    <script>
-        // Scroll to top functionality
-        let scrollToTopBtn = document.getElementById('scrollToTop');
-
-        scrollToTopBtn.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 100) {
-                scrollToTopBtn.style.display = 'block';
-            } else {
-                scrollToTopBtn.style.display = 'none';
-            }
-        });
-
-        // Opening screen hide and reveal content functionality
-        function enterSite() {
-            document.getElementById('openingScreen').style.display = 'none';
-            document.body.style.overflow = 'auto';
-            document.querySelector('header').style.display = 'block';
-            document.querySelector('nav').style.display = 'block';
-            document.querySelector('main').style.display = 'block';
-            document.querySelector('footer').style.display = 'block';
-        }
-    </script>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Purna Sati Chandrala. All rights reserved.</p>
-    </footer>
+</html>
