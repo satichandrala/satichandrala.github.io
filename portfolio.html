@@ -7,6 +7,18 @@
     <title>Purna Sati Chandrala's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Sora:wght@300;400;500;600&display=swap");
+
+        :root {
+            --ink: #2d2520;
+            --paper: #f9f4ed;
+            --sand: #f2e6d8;
+            --copper: #b86b43;
+            --clay: #8d5b44;
+            --accent: #2f6f66;
+            --shadow: rgba(30, 22, 18, 0.12);
+        }
+
         /* Reset & Global Styles */
         body,
         h1,
@@ -15,20 +27,26 @@
         a {
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
+            font-family: "Sora", "Segoe UI", sans-serif;
         }
 
         body {
             margin: 0;
-            color: #3a3a3a;
-            line-height: 1.6;
+            color: var(--ink);
+            line-height: 1.7;
             font-size: 16px;
             overflow: hidden;
+            background:
+                radial-gradient(900px 480px at 12% 0%, rgba(184, 107, 67, 0.18), transparent 60%),
+                radial-gradient(800px 480px at 110% 10%, rgba(47, 111, 102, 0.18), transparent 60%),
+                linear-gradient(180deg, #fbf7f0 0%, #f2e6d8 100%);
         }
 
         h1,
         h2 {
-            color: #4b3832;
+            color: var(--ink);
+            font-family: "Fraunces", "Times New Roman", serif;
+            letter-spacing: 0.02em;
         }
 
         /* Opening Screen */
@@ -61,14 +79,14 @@
             padding: 10px 20px;
             font-size: 1.2rem;
             color: #ffffff;
-            background-color: #a0522d;
+            background-color: var(--accent);
             border: none;
             border-radius: 10px;
             cursor: pointer;
         }
 
         #openingScreenContent button:hover {
-            background-color: #b45a3c;
+            background-color: #3a8077;
         }
 
         /* Video Background */
@@ -93,11 +111,10 @@
         }
 
         header h1 {
-            background: linear-gradient(90deg, #c1a17b, #eddcc8);
-            padding: 15px;
-            border-radius: 16px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            color: #4b3832;
+            background: linear-gradient(120deg, #efe2d2, #fbf7f0);
+            padding: 18px 22px;
+            border-radius: 18px;
+            box-shadow: 0 16px 30px var(--shadow);
         }
 
         /* Navigation */
@@ -113,15 +130,18 @@
         nav a {
             margin: 0 1rem;
             text-decoration: none;
-            color: #4b3832;
+            color: var(--ink);
             padding: 10px 20px;
-            border-radius: 8px;
-            transition: background-color 0.3s, color 0.3s;
+            border-radius: 999px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(45, 37, 32, 0.12);
         }
 
         nav a:hover {
-            background-color: #dfc2a1;
-            color: #4b3832;
+            background-color: #f3e1cf;
+            color: var(--ink);
+            transform: translateY(-2px);
         }
 
         /* Main Content */
@@ -134,12 +154,13 @@
 
         section {
             margin-bottom: 2rem;
-            padding: 2rem;
-            border-radius: 1rem;
-            background-color: #f8efe4;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            padding: 2.25rem;
+            border-radius: 1.25rem;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 18px 30px var(--shadow);
             cursor: pointer;
             transition: transform 0.3s;
+            border: 1px solid rgba(45, 37, 32, 0.08);
         }
 
         section:hover {
@@ -148,12 +169,12 @@
 
         /* Sticky Note Style Cards */
         .sticky-note {
-            background-color: #f5e6d9;
-            border: 2px dashed #c1a17b;
-            border-radius: 20px;
-            padding: 25px;
+            background: rgba(255, 255, 255, 0.84);
+            border: 1px solid rgba(184, 107, 67, 0.2);
+            border-radius: 22px;
+            padding: 26px;
             margin-bottom: 24px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(30, 22, 18, 0.08);
             text-align: left;
             transition: transform 0.3s;
         }
@@ -163,7 +184,7 @@
         }
 
         .sticky-note h3 {
-            color: #a0522d;
+            color: var(--copper);
             margin-bottom: 10px;
         }
 
@@ -184,11 +205,11 @@
 
         .skill-name {
             font-weight: bold;
-            color: #4b3832;
+            color: var(--ink);
         }
 
         .skill-bar {
-            background-color: #f8efe4;
+            background-color: var(--sand);
             border-radius: 10px;
             overflow: hidden;
             margin-top: 5px;
@@ -196,7 +217,7 @@
 
         .skill-bar-level {
             height: 20px;
-            background-color: #a0522d;
+            background: linear-gradient(90deg, var(--copper), var(--accent));
             transition: width 1s ease-in-out;
         }
 
@@ -204,13 +225,13 @@
         .contact-link {
             display: block;
             margin-top: 0.5rem;
-            color: #a0522d;
+            color: var(--accent);
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .contact-link:hover {
-            color: #b45a3c;
+            color: #3a8077;
         }
 
         /* Scroll to Top Button */
@@ -219,17 +240,18 @@
             bottom: 20px;
             right: 20px;
             display: none;
-            background-color: #a0522d;
+            background-color: var(--accent);
             color: white;
             border: none;
             padding: 12px 24px;
             font-size: 18px;
             cursor: pointer;
             border-radius: 12px;
+            box-shadow: 0 10px 18px rgba(30, 22, 18, 0.2);
         }
 
         #scrollToTop:hover {
-            background-color: #b45a3c;
+            background-color: #3a8077;
         }
 
         /* Footer */
@@ -237,9 +259,9 @@
             text-align: center;
             padding: 1.5rem;
             font-size: 14px;
-            color: #4b3832;
-            background-color: #f8efe4;
-            border-top: 1px solid #dfc2a1;
+            color: var(--ink);
+            background-color: var(--paper);
+            border-top: 1px solid rgba(45, 37, 32, 0.12);
             display: none;
         }
 
@@ -283,6 +305,7 @@
     <!-- Navigation -->
     <nav>
         <a href="#about">About</a>
+        <a href="#skills">Top Skills</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#work-experience">Work Experience</a>
         <a href="#education">Education</a>
@@ -350,23 +373,20 @@
             <h2>My Portfolio</h2>
         </section>
         <div id="portfolio-content" class="sticky-note">
-            <h3>Using Machine Learning and Artificial Neural Networks for Analysis of Cologne Residential Land Market
-            </h3>
-            <p>Master Project, MSc GIS and Spatial Development</p>
-            <p>April 2020 - April 2021</p>
-            <p>Made predictive data analysis using regression analysis and artificial neural networks. Improved the
-                accuracy of model prediction from 48% to 63%.</p>
-            <h3>Visualization of Travel Time Maps of Bonn</h3>
-            <p>Location-Based Services, MSc GIS and Spatial Development</p>
-            <p>April 2020 - Aug 2020</p>
-            <p>Developed an Android Application for travel time maps in Bonn. Analyzed the streets of Bonn using ArcGIS.
-            </p>
-            <h3>Developing a Geoinformation System for Interdisciplinary Research Data Management</h3>
-            <p>Data Management for Interdisciplinary Research, MSc GIS and Spatial Development</p>
-            <p>September 2020 - February 2021</p>
-            <p>Provided solution for Research Data Management using GIS, RDF Database, and SQL. Developed an ontology
-                for metadata and wrote SPARQL queries.</p>
-        </div>        <!-- Work Experience Section -->
+            <h3>PLM Automation and Workflow Enablement</h3>
+            <p>Centric PLM | Fashion and Retail</p>
+            <p>Configured XML, JavaScript, MSSQL integrations, and BPMN workflows in Camunda to support data automation,
+                uploads, and exports.</p>
+            <h3>Digital Twin and Satellite Data Pipelines</h3>
+            <p>GeoInsight</p>
+            <p>Automated downloads from three satellite sources and applied ML methods for anomaly detection and
+                dimensionality reduction.</p>
+            <h3>Forest Map Classification with Decision Trees</h3>
+            <p>Master's Thesis | University of Bonn</p>
+            <p>Digitized historical forest management maps with decision tree models, achieving over 95% accuracy.</p>
+        </div>
+
+        <!-- Work Experience Section -->
         <section id="work-experience" class="animated-section"
             onclick="document.getElementById('work-experience-content').scrollIntoView({ behavior: 'smooth' });">
             <h2>Work Experience</h2>
@@ -440,11 +460,13 @@
         <section id="contact" class="animated-section"
             onclick="document.getElementById('contact-content').scrollIntoView({ behavior: 'smooth' });">
             <h2>Contact Me</h2>
-        </section>        <div id="contact-content" class="sticky-note">
+        </section>
+        <div id="contact-content" class="sticky-note">
             <h3>Contact Me</h3>
             <a href="mailto:satichandrala@gmail.com" class="contact-link">Email: satichandrala@gmail.com</a>
             <a href="https://www.linkedin.com/in/purnasch" target="_blank" rel="noopener noreferrer"
                 class="contact-link">LinkedIn: www.linkedin.com/in/purnasch</a>
+            <a href="resume.pdf" class="contact-link">Download Resume (PDF)</a>
         </div>
     </main>
 
